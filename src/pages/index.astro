@@ -2,17 +2,24 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
-import PrivateSection from '../components/PrivateSection.astro';
-import CorporateSection from '../components/CorporateSection.astro';
-import Stats from '../components/Stats.astro';
-import Footer from '../components/Footer.astro';
+import VolunteersSection from '../components/VolunteersSection.astro';
+import AssociationsSection from '../components/AssociationsSection.astro';
+import Divider from '../components/Divider.astro';
+import CompaniesSection from '../components/CompaniesSection.astro';
 ---
 
 <Layout title="Volontariando - Connetti Volontari, Associazioni e Aziende">
-	<Navbar />
-	<Hero />
-	<PrivateSection />
-	<CorporateSection />
-	<Stats />
-	<Footer />
+	<main class="overflow-x-clip">
+		<Navbar />
+
+		<div class="bg-slate-50">
+			<Hero />
+			<VolunteersSection />
+			<AssociationsSection />
+		</div>
+
+		<Divider />
+
+		<CompaniesSection />
+	</main>
 </Layout>
