@@ -1,0 +1,95 @@
+---
+// Hero.astro - Hero section with dual CTA - Tailwind v4 compatible
+---
+
+<section class="relative py-20 md:py-32 overflow-hidden">
+	<!-- Background elements -->
+	<div class="absolute inset-0 bg-linear-to-br from-emerald-50/30 via-white to-blue-50/20 pointer-events-none"></div>
+	<div class="absolute top-10 right-0 w-72 h-72 bg-emerald-200/10 rounded-full blur-3xl"></div>
+	<div class="absolute bottom-20 left-0 w-96 h-96 bg-blue-200/10 rounded-full blur-3xl"></div>
+
+	<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="text-center space-y-8">
+			<!-- Main Headline -->
+			<h1 class="font-black tracking-tight text-slate-900 text-4xl md:text-5xl lg:text-6xl">
+				<span class="block">Semplifica il tuo</span>
+				<span class="block bg-linear-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">volontariato,</span>
+				<span class="block">amplifica il tuo impatto</span>
+			</h1>
+
+			<!-- Subtitle -->
+			<p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 font-medium leading-relaxed">
+				Connetti volontari appassionati con cause significative, traccia il tuo impatto sociale e guida le iniziative ESG della tua azienda. 
+				Tutto in una piattaforma.
+			</p>
+
+			<!-- Dual CTA Buttons -->
+			<div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+				<!-- CTA for Volunteers -->
+				<a href="#per-volontari" class="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 bg-emerald-600 text-white font-bold rounded-xl hover:scale-105 transition-all duration-200 hover:shadow-lg hover:shadow-emerald-200 group">
+					<span>Scopri le Cause</span>
+					<svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+					</svg>
+				</a>
+
+				<!-- CTA for Companies -->
+				<a href="#per-aziende" class="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 bg-white border-2 border-slate-200 text-slate-900 font-bold rounded-xl hover:border-violet-600 hover:scale-105 transition-all duration-200 hover:shadow-lg">
+					<span>ESG Aziendale</span>
+					<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+					</svg>
+				</a>
+			</div>
+
+			<!-- Social Proof / Stats Mini -->
+			<div class="pt-8 flex flex-wrap justify-center gap-8 text-sm">
+				<div class="flex items-center gap-2">
+					<span class="inline-block w-2 h-2 rounded-full bg-emerald-600"></span>
+					<span class="text-slate-600">10,000+ ore donate</span>
+				</div>
+				<div class="flex items-center gap-2">
+					<span class="inline-block w-2 h-2 rounded-full bg-blue-600"></span>
+					<span class="text-slate-600">500+ associazioni attive</span>
+				</div>
+				<div class="flex items-center gap-2">
+					<span class="inline-block w-2 h-2 rounded-full bg-violet-600"></span>
+					<span class="text-slate-600">150+ aziende partner</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Hero Illustration area (3 feature cards) -->
+		<div class="mt-16 md:mt-24 grid md:grid-cols-3 gap-6">
+			<div class="rounded-3xl bg-linear-to-br from-emerald-500/10 to-emerald-500/5 border border-emerald-200/30 p-6 hover:scale-105 transition-transform duration-300">
+				<div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center mb-4">
+					<svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+					</svg>
+				</div>
+				<h3 class="font-black text-slate-900">Rapido e Facile</h3>
+				<p class="text-sm text-slate-600 mt-2">Registrati e inizia a fare differenza in pochi minuti</p>
+			</div>
+
+			<div class="rounded-3xl bg-linear-to-br from-blue-500/10 to-blue-500/5 border border-blue-200/30 p-6 hover:scale-105 transition-transform duration-300">
+				<div class="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center mb-4">
+					<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+					</svg>
+				</div>
+				<h3 class="font-black text-slate-900">Traccia l'Impatto</h3>
+				<p class="text-sm text-slate-600 mt-2">Visualizza le metriche e l'effetto del tuo contributo</p>
+			</div>
+
+			<div class="rounded-3xl bg-linear-to-br from-violet-500/10 to-violet-500/5 border border-violet-200/30 p-6 hover:scale-105 transition-transform duration-300">
+				<div class="w-12 h-12 rounded-2xl bg-violet-100 flex items-center justify-center mb-4">
+					<svg class="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+					</svg>
+				</div>
+				<h3 class="font-black text-slate-900">Community Globale</h3>
+				<p class="text-sm text-slate-600 mt-2">Unisciti a migliaia di volontari e causatori di cambiamento</p>
+			</div>
+		</div>
+	</div>
+</section>

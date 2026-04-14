@@ -1,0 +1,105 @@
+---
+// Stats.astro - Impact statistics section - Tailwind v4
+---
+
+<section id="statistiche" class="py-20 md:py-32 relative overflow-hidden">
+	<!-- Background -->
+	<div class="absolute inset-0 bg-linear-to-r from-violet-600 via-purple-600 to-violet-600"></div>
+	<div class="absolute inset-0 bg-linear-to-b from-transparent via-slate-900/10 to-slate-900/30"></div>
+
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+		<!-- Section Header -->
+		<div class="text-center mb-16 md:mb-20">
+			<h2 class="text-white mb-4 font-black tracking-tight text-3xl md:text-4xl lg:text-5xl">
+				<span class="block">Il Nostro Impatto</span>
+				<span class="block">in Numeri</span>
+			</h2>
+			<p class="max-w-2xl mx-auto text-lg text-white/80 mt-6">
+				Scopri come Volontariando sta trasformando il panorama del volontariato in Italia e oltre
+			</p>
+		</div>
+
+		<!-- Stats Grid -->
+		<div class="grid md:grid-cols-4 gap-6 md:gap-8">
+			<!-- Stat 1: Hours -->
+			<div class="group rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-8 text-center hover:bg-white/15 transition-all duration-300">
+				<div class="mb-4">
+					<span class="text-5xl md:text-6xl font-black text-white">10K+</span>
+				</div>
+				<p class="text-white/80 font-semibold text-base md:text-lg">Ore Volontarie Pubbliche</p>
+				<p class="text-white/60 text-sm mt-2">Donate attraverso la piattaforma</p>
+			</div>
+
+			<!-- Stat 2: Associations -->
+			<div class="group rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-8 text-center hover:bg-white/15 transition-all duration-300">
+				<div class="mb-4">
+					<span class="text-5xl md:text-6xl font-black text-white">500+</span>
+				</div>
+				<p class="text-white/80 font-semibold text-base md:text-lg">Associazioni Partner</p>
+				<p class="text-white/60 text-sm mt-2">Verificate e attive</p>
+			</div>
+
+			<!-- Stat 3: Volunteers -->
+			<div class="group rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-8 text-center hover:bg-white/15 transition-all duration-300">
+				<div class="mb-4">
+					<span class="text-5xl md:text-6xl font-black text-white">25K+</span>
+				</div>
+				<p class="text-white/80 font-semibold text-base md:text-lg">Volontari Attivi</p>
+				<p class="text-white/60 text-sm mt-2">Nella nostra community</p>
+			</div>
+
+			<!-- Stat 4: Companies -->
+			<div class="group rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-8 text-center hover:bg-white/15 transition-all duration-300">
+				<div class="mb-4">
+					<span class="text-5xl md:text-6xl font-black text-white">150+</span>
+				</div>
+				<p class="text-white/80 font-semibold text-base md:text-lg">Aziende ESG</p>
+				<p class="text-white/60 text-sm mt-2">Con programmi attivi</p>
+			</div>
+		</div>
+
+		<!-- Additional Stats - Row 2 -->
+		<div class="grid md:grid-cols-3 gap-6 md:gap-8 mt-6 md:mt-8">
+			<!-- Stat 5: Social Value -->
+			<div class="group rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-8 text-center hover:bg-white/15 transition-all duration-300">
+				<div class="mb-4">
+					<span class="text-4xl md:text-5xl font-black text-white">€2.5M+</span>
+				</div>
+				<p class="text-white/80 font-semibold text-base md:text-lg">Valore Sociale</p>
+				<p class="text-white/60 text-sm mt-2">Generato nel 2024</p>
+			</div>
+
+			<!-- Stat 6: Projects -->
+			<div class="group rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-8 text-center hover:bg-white/15 transition-all duration-300">
+				<div class="mb-4">
+					<span class="text-4xl md:text-5xl font-black text-white">1K+</span>
+				</div>
+				<p class="text-white/80 font-semibold text-base md:text-lg">Progetti Completati</p>
+				<p class="text-white/60 text-sm mt-2">Cause che hanno battito</p>
+			</div>
+
+			<!-- Stat 7: People Helped -->
+			<div class="group rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-8 text-center hover:bg-white/15 transition-all duration-300">
+				<div class="mb-4">
+					<span class="text-4xl md:text-5xl font-black text-white">50K+</span>
+				</div>
+				<p class="text-white/80 font-semibold text-base md:text-lg">Persone Aiutate</p>
+				<p class="text-white/60 text-sm mt-2">Sorrisi moltiplicati</p>
+			</div>
+		</div>
+
+		<!-- Testimonial / Impact Quote -->
+		<div class="mt-16 md:mt-24 rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 p-10 md:p-12 max-w-3xl mx-auto text-center">
+			<svg class="w-8 h-8 text-white/40 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+				<path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.25-2-7-2s-7 .75-7 2v10c0 1 0 7 7 7z"></path>
+			</svg>
+			<p class="text-white text-lg md:text-xl font-semibold mb-4">
+				"Volontariando ci ha permesso di coinvolgere 200 dipendenti in progetti che amano, aumentando 
+				l'engagement del 45% e certificando il nostro impatto ESG con trasparenza."
+			</p>
+			<p class="text-white/70 text-sm">
+				— Giulia Rossi, <span class="text-white font-semibold">Head of ESG</span>, TechCorp Italia
+			</p>
+		</div>
+	</div>
+</section>
