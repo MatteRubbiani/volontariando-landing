@@ -1,40 +1,51 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const registrationUrl = 'https://app.volontariando.it/auth/registrazione';
+---
+
 <section id="imprese" class="relative w-full min-h-[100svh] flex flex-col items-center justify-center pt-24 pb-8 overflow-hidden bg-slate-950 text-white">
 	<div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-linear-to-br from-slate-900 via-slate-950 to-slate-900"></div>
 	<div class="relative w-full max-w-7xl mx-auto px-6 lg:px-8">
 		<div class="max-w-3xl">
-			<p class="reveal-on-scroll text-[10px] font-black uppercase tracking-widest text-violet-300 transition-all duration-1000 ease-out">Piano imprese ESG</p>
+			<p class="reveal-on-scroll text-[10px] font-black uppercase tracking-widest text-violet-300 transition-all duration-1000 ease-out">{t.companies.eyebrow}</p>
 			<h2 class="reveal-on-scroll mt-4 text-3xl font-black tracking-tight text-white transition-all duration-1000 ease-out delay-100 sm:text-5xl">
-				L'impatto sociale della tua azienda, reso semplice.
+				{t.companies.title}
 			</h2>
 			<p class="reveal-on-scroll mt-5 max-w-2xl text-lg font-medium leading-relaxed text-slate-300 transition-all duration-1000 ease-out delay-200">
-				Dalla pianificazione al reporting, ogni iniziativa e tracciata con chiarezza per trasformare l'impegno sociale in risultati leggibili, misurabili e condivisibili.
+				{t.companies.description}
 			</p>
 		</div>
 
-		<div class="mt-12 grid gap-5 md:grid-cols-6">
-			<article class="reveal-on-scroll rounded-3xl border border-violet-500/30 bg-slate-900/80 p-7 transition-all duration-1000 ease-out delay-100 md:col-span-4">
-				<p class="text-[10px] font-black uppercase tracking-widest text-violet-300">Volontariato d'impresa</p>
-				<h3 class="mt-3 text-2xl font-black tracking-tight text-white">Team Building solidale.</h3>
-				<p class="mt-3 text-sm font-medium leading-relaxed text-slate-300">Attivita pronte all'uso sul territorio, organizzate e gestite senza appesantire il reparto HR.</p>
+		<div class="mt-12 grid gap-5 md:grid-cols-3">
+			<article class="reveal-on-scroll rounded-3xl border border-violet-500/30 bg-slate-900/80 p-7 transition-all duration-1000 ease-out delay-100">
+				<p class="text-[10px] font-black uppercase tracking-widest text-violet-300">{t.companies.cards[0].eyebrow}</p>
+				<h3 class="mt-3 text-2xl font-black tracking-tight text-white">{t.companies.cards[0].title}</h3>
+				<p class="mt-3 text-sm font-medium leading-relaxed text-slate-300">{t.companies.cards[0].description}</p>
 			</article>
 
-			<article class="reveal-on-scroll rounded-3xl border border-violet-500/30 bg-slate-900/80 p-7 transition-all duration-1000 ease-out delay-200 md:col-span-2">
-				<p class="text-[10px] font-black uppercase tracking-widest text-violet-300">Reportistica ESG</p>
-				<p class="mt-2 text-3xl font-black tracking-tight text-violet-300">Live KPI</p>
-				<p class="mt-2 text-sm font-medium text-slate-400">Dati chiari e tracciabili sulle ore donate dai dipendenti, perfetti per arricchire il Bilancio di Sostenibilita.</p>
+			<article class="reveal-on-scroll rounded-3xl border border-violet-500/30 bg-slate-900/80 p-7 transition-all duration-1000 ease-out delay-200">
+				<p class="text-[10px] font-black uppercase tracking-widest text-violet-300">{t.companies.cards[1].eyebrow}</p>
+				<h3 class="mt-3 text-2xl font-black tracking-tight text-white">{t.companies.cards[1].title}</h3>
+				<p class="mt-3 text-sm font-medium leading-relaxed text-slate-300">{t.companies.cards[1].description}</p>
 			</article>
 
-			<article class="reveal-on-scroll rounded-3xl border border-slate-700 bg-slate-900/80 p-7 transition-all duration-1000 ease-out delay-300 md:col-span-3">
-				<p class="text-[10px] font-black uppercase tracking-widest text-slate-400">Dashboard</p>
-				<h3 class="mt-3 text-xl font-black tracking-tight text-white">Dati chiari e tracciabili.</h3>
-				<p class="mt-3 text-sm font-medium leading-relaxed text-slate-300">Una vista unica per monitorare partecipazione, ore donate e impatto generato in tempo reale.</p>
+			<article class="reveal-on-scroll rounded-3xl border border-slate-700 bg-slate-900/80 p-7 transition-all duration-1000 ease-out delay-300">
+				<p class="text-[10px] font-black uppercase tracking-widest text-slate-400">{t.companies.cards[2].eyebrow}</p>
+				<h3 class="mt-3 text-2xl font-black tracking-tight text-white">{t.companies.cards[2].title}</h3>
+				<p class="mt-3 text-sm font-medium leading-relaxed text-slate-300">{t.companies.cards[2].description}</p>
 			</article>
+		</div>
 
-			<article class="reveal-on-scroll rounded-3xl border border-slate-700 bg-slate-900/80 p-7 transition-all duration-1000 ease-out delay-400 md:col-span-3">
-				<p class="text-[10px] font-black uppercase tracking-widest text-slate-400">Partnership territoriali</p>
-				<h3 class="mt-3 text-xl font-black tracking-tight text-white">Connessioni sicure.</h3>
-				<p class="mt-3 text-sm font-medium leading-relaxed text-slate-300">Un network di associazioni verificate per erogazioni, donazioni e sponsorizzazioni con un ritorno reputazionale misurabile.</p>
-			</article>
+		<div class="reveal-on-scroll mt-10 transition-all duration-1000 ease-out delay-400">
+			<a
+				href={registrationUrl}
+				class="inline-flex items-center rounded-full bg-violet-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(139,92,246,0.3)] transition-transform duration-300 hover:scale-[1.02]"
+			>
+				{t.companies.cta}
+			</a>
 		</div>
 	</div>
 </section>
