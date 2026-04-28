@@ -6,20 +6,20 @@ import VolunteersSection from '../../components/VolunteersSection.astro';
 import AssociationsSection from '../../components/AssociationsSection.astro';
 import Divider from '../../components/Divider.astro';
 import CompaniesSection from '../../components/CompaniesSection.astro';
-import { languages, defaultLang, useTranslations, type Language } from '../../i18n/ui';
+import type { Language } from '../../i18n/ui';
 
 export function getStaticPaths() {
-	return Object.keys(languages).map((lang) => ({
-		params: { lang },
-	}));
+	return [
+		{ params: { lang: 'it' } },
+		{ params: { lang: 'en' } },
+	];
 }
 
 const langParam = Astro.params.lang;
-const lang: Language = langParam === 'it' || langParam === 'en' ? langParam : defaultLang;
-const t = useTranslations(lang);
+const lang: Language = langParam === 'en' ? 'en' : 'it';
 ---
 
-<Layout lang={lang} title={t.seo.title} description={t.seo.description}>
+<Layout lang={lang}>
 	<main class="overflow-x-clip">
 		<Navbar />
 

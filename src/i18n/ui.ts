@@ -10,16 +10,16 @@ export const defaultLang: Language = 'it';
 export const ui = {
 	it: {
 		seo: {
-			title: 'Volontariando | Volontariato digitale a impatto misurabile',
+			title: 'Volontariando | Corporate Volunteering e impatto misurabile',
 			description:
-				"Una piattaforma digitale che connette cittadini, organizzazioni non profit e imprese per un volontariato accessibile, misurabile e ad alto impatto sociale.",
+				"Piattaforma multilingua per Corporate Volunteering, ESG Reporting e Social Responsibility con Volunteer Management, matching e impatto misurabile.",
 		},
 		concept:
-			"Una piattaforma digitale che connette cittadini, organizzazioni non profit e imprese per un volontariato accessibile, misurabile e ad alto impatto sociale.",
+			"Una piattaforma multilingua per attivare volontari, associazioni e aziende con processi moderni e risultati misurabili.",
 		nav: {
 			volunteers: 'Volontari',
 			associations: 'Associazioni',
-			companies: 'Imprese ESG',
+			companies: 'Corporate Volunteering',
 			login: 'Accedi',
 		},
 		hero: {
@@ -68,19 +68,19 @@ export const ui = {
 				'Ogni persona puo trovare il contesto giusto per contribuire, con percorsi guidati e tracciamento del valore generato.',
 			cards: [
 				{
-					eyebrow: 'Matching basato su competenze',
+					eyebrow: 'Skill-based volunteering',
 					title: 'Opportunita in linea con il tuo profilo',
 					description:
 						'Il matching valorizza skill, disponibilita e interessi per proporre attivita ad alta rilevanza personale e sociale.',
 				},
 				{
-					eyebrow: 'Mappa interattiva',
+					eyebrow: 'Interactive Map',
 					title: 'Cause vicine, impatto immediato',
 					description:
 						"Visualizza in pochi secondi le opportunita nel tuo territorio e unisciti alle iniziative con onboarding rapido.",
 				},
 				{
-					eyebrow: 'Percorso professionale',
+					eyebrow: 'Volunteer Management',
 					title: 'Esperienze utili anche alla crescita',
 					description:
 						'Competenze e contributi restano tracciati in modo chiaro per raccontare il tuo impatto con credibilita.',
@@ -89,25 +89,25 @@ export const ui = {
 			cta: 'Registrati come volontario',
 		},
 		associations: {
-			eyebrow: 'Per associazioni',
-			title: 'Digitalizza i processi, rafforza la fiducia.',
+			eyebrow: 'Digital Transformation',
+			title: 'Digitalizza i processi, rafforza la fiducia verificata.',
 			description:
 				'Semplifica la gestione operativa e attiva una rete affidabile per crescere con partner, volontari e aziende.',
 			cards: [
 				{
-					eyebrow: 'Digitalizzazione dei processi',
+					eyebrow: 'Volunteer Management',
 					title: 'Dal recruiting alla conferma presenze',
 					description:
 						'Flussi digitali per candidature, turni, comunicazioni e coordinamento operativo in un unico ambiente.',
 				},
 				{
-					eyebrow: 'Rete di fiducia verificata',
+					eyebrow: 'Verified Network',
 					title: 'Collaborazioni trasparenti e sicure',
 					description:
 						'Profili verificati e governance chiara per costruire partnership solide con cittadini e stakeholder territoriali.',
 				},
 				{
-					eyebrow: 'Execution orientata ai risultati',
+					eyebrow: 'Digital Transformation',
 					title: 'Meno attrito, piu impatto',
 					description:
 						'Riduci il carico amministrativo e concentra il team su attivazione volontari e obiettivi sociali misurabili.',
@@ -116,25 +116,25 @@ export const ui = {
 			cta: "Attiva l'associazione",
 		},
 		companies: {
-			eyebrow: 'Per aziende',
+			eyebrow: 'Corporate Volunteering',
 			title: 'Strategie ESG che diventano impatto reale.',
 			description:
 				'Progetta iniziative di volontariato aziendale, coordina team interni e trasforma le attivita in evidenze misurabili.',
 			cards: [
 				{
-					eyebrow: 'Strategie ESG',
+					eyebrow: 'ESG Reporting',
 					title: 'Programmi sociali allineati al business',
 					description:
 						'Definisci priorita, obiettivi e governance ESG con una roadmap operativa integrata.',
 				},
 				{
-					eyebrow: "Volontariato aziendale",
+					eyebrow: 'Social Responsibility',
 					title: 'Team engagement su progetti ad alto valore',
 					description:
 						'Attiva dipendenti e ambassador con iniziative coordinate insieme a enti nonprofit verificati.',
 				},
 				{
-					eyebrow: "Report d'impatto",
+					eyebrow: 'Impact Reporting',
 					title: 'Misurazione pronta per stakeholder e board',
 					description:
 						'Dati tracciabili e KPI leggibili per reporting ESG, comunicazione istituzionale e decisioni data-driven.',
@@ -145,16 +145,16 @@ export const ui = {
 	},
 	en: {
 		seo: {
-			title: 'Volontariando | Digital volunteering with measurable impact',
+			title: 'Volontariando | Corporate Volunteering with measurable impact',
 			description:
-				'A digital platform connecting citizens, nonprofits and businesses for accessible, measurable and impactful volunteering.',
+				'Multilingual platform for Corporate Volunteering, ESG Reporting and Social Responsibility with skill-based volunteer management and measurable impact.',
 		},
 		concept:
-			'A digital platform connecting citizens, nonprofits and businesses for accessible, measurable and impactful volunteering.',
+			'A multilingual platform connecting citizens, nonprofits and businesses through modern workflows and measurable outcomes.',
 		nav: {
 			volunteers: 'Volunteers',
 			associations: 'Nonprofits',
-			companies: 'ESG Companies',
+			companies: 'Corporate Volunteering',
 			login: 'Login',
 		},
 		hero: {
@@ -203,19 +203,19 @@ export const ui = {
 				'Every person can find the right way to contribute through guided journeys and clear impact tracking.',
 			cards: [
 				{
-					eyebrow: 'Skill-based matching',
+					eyebrow: 'Skill-based volunteering',
 					title: 'Opportunities aligned with your profile',
 					description:
 						'Matching combines skills, availability and interests to suggest high-relevance opportunities.',
 				},
 				{
-					eyebrow: 'Interactive map',
+					eyebrow: 'Interactive Map',
 					title: 'Nearby causes, immediate action',
 					description:
 						'Discover local opportunities quickly and join initiatives with a fast onboarding flow.',
 				},
 				{
-					eyebrow: 'Professional growth',
+					eyebrow: 'Volunteer Management',
 					title: 'Experience that strengthens your journey',
 					description:
 						'Contributions and skills are clearly tracked so you can communicate your impact credibly.',
@@ -224,25 +224,25 @@ export const ui = {
 			cta: 'Sign up as a volunteer',
 		},
 		associations: {
-			eyebrow: 'For nonprofits',
-			title: 'Digitize operations, strengthen trust.',
+			eyebrow: 'Digital Transformation',
+			title: 'Digitize operations, strengthen verified trust.',
 			description:
 				'Simplify execution and activate a reliable network to grow with volunteers, partners and companies.',
 			cards: [
 				{
-					eyebrow: 'Process digitalization',
+					eyebrow: 'Volunteer Management',
 					title: 'From recruiting to attendance validation',
 					description:
 						'Digital workflows for applications, shifts, communication and coordination in one platform.',
 				},
 				{
-					eyebrow: 'Verified trust network',
+					eyebrow: 'Verified Network',
 					title: 'Transparent and secure collaboration',
 					description:
 						'Verified profiles and clear governance to build durable partnerships with stakeholders.',
 				},
 				{
-					eyebrow: 'Outcome-oriented execution',
+					eyebrow: 'Digital Transformation',
 					title: 'Less admin, more impact',
 					description:
 						'Reduce operational friction and focus teams on volunteer activation and social outcomes.',
@@ -251,25 +251,25 @@ export const ui = {
 			cta: 'Activate your nonprofit',
 		},
 		companies: {
-			eyebrow: 'For businesses',
+			eyebrow: 'Corporate Volunteering',
 			title: 'ESG strategies turned into real impact.',
 			description:
 				'Design corporate volunteering programs, coordinate teams and convert actions into measurable evidence.',
 			cards: [
 				{
-					eyebrow: 'ESG strategies',
+					eyebrow: 'ESG Reporting',
 					title: 'Social programs aligned with business goals',
 					description:
 						'Define priorities, governance and ESG objectives with a clear operational roadmap.',
 				},
 				{
-					eyebrow: 'Corporate volunteering',
+					eyebrow: 'Social Responsibility',
 					title: 'Team engagement through high-value initiatives',
 					description:
 						'Activate employees and ambassadors with coordinated projects and verified nonprofit partners.',
 				},
 				{
-					eyebrow: 'Impact reporting',
+					eyebrow: 'Impact Reporting',
 					title: 'Measurable evidence for stakeholders and board',
 					description:
 						'Traceable data and clear KPI for ESG reporting, institutional storytelling and decisions.',

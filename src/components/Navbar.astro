@@ -3,7 +3,7 @@ import { getLangFromUrl, useTranslations, type Language } from '../i18n/ui';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const loginUrl = 'https://app.volontariando.it/auth/login';
+const loginUrl = 'https://app.volontariando.it';
 const routeWithLang = (hash: string) => `/${lang}/#${hash}`;
 
 const pathnameSegments = Astro.url.pathname.split('/').filter(Boolean);

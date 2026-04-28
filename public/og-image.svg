@@ -1,0 +1,21 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#08111F"/>
+  <path d="M0 0H1200V630H0V0Z" fill="url(#paint0_linear)"/>
+  <circle cx="990" cy="120" r="180" fill="#10B981" fill-opacity="0.18"/>
+  <circle cx="180" cy="520" r="220" fill="#3B82F6" fill-opacity="0.16"/>
+  <circle cx="1040" cy="470" r="120" fill="#8B5CF6" fill-opacity="0.16"/>
+  <rect x="84" y="84" width="120" height="120" rx="30" fill="#FFFFFF" fill-opacity="0.08"/>
+  <path d="M126 132C141 117 165 117 180 132C187 139 187 150 180 157L148 189C141 196 130 196 123 189C115 181 115 170 123 163L148 138" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M119 177C119 156 136 140 157 140C167 140 176 144 183 150" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="84" y="300" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4">VOLONTARIANDO</text>
+  <text x="84" y="400" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="800">Corporate Volunteering</text>
+  <text x="84" y="475" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="500">ESG Reporting · Social Responsibility · Multilingual landing</text>
+  <text x="84" y="545" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500">Volontariando.it</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="88" y1="40" x2="1104" y2="588" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="0.5" stop-color="#111C33"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+  </defs>
+</svg>
