@@ -1,18 +1,10 @@
 ---
-import { getLangFromUrl, useTranslations, type Language } from '../i18n/ui';
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const loginUrl = 'https://app.volontariando.it';
 const routeWithLang = (hash: string) => `/${lang}/#${hash}`;
-
-const pathnameSegments = Astro.url.pathname.split('/').filter(Boolean);
-const hasLangPrefix = pathnameSegments[0] === 'it' || pathnameSegments[0] === 'en';
-const currentPathWithoutLang = hasLangPrefix ? pathnameSegments.slice(1) : pathnameSegments;
-const normalizedCurrentPath =
-	currentPathWithoutLang.length > 0 ? `/${currentPathWithoutLang.join('/')}` : '/';
-const langHref = (selectedLang: Language) =>
-	`/${selectedLang}${normalizedCurrentPath === '/' ? '/' : normalizedCurrentPath}`;
 ---
 
 <nav class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-md">
@@ -26,36 +18,15 @@ const langHref = (selectedLang: Language) =>
 		</a>
 
 		<div class="hidden items-center gap-7 md:flex">
-			<a href={routeWithLang('volontari')} class="text-sm font-medium text-slate-600 transition-colors hover:text-emerald-600">{t.nav.volunteers}</a>
-			<a href={routeWithLang('associazioni')} class="text-sm font-medium text-slate-600 transition-colors hover:text-blue-600">{t.nav.associations}</a>
+			<a href={routeWithLang('volontari')} class="text-sm font-medium text-slate-600 transition-colors hover:text-blue-600">{t.nav.volunteers}</a>
+			<a href={routeWithLang('associazioni')} class="text-sm font-medium text-slate-600 transition-colors hover:text-emerald-600">{t.nav.associations}</a>
 			<a href={routeWithLang('imprese')} class="text-sm font-medium text-slate-600 transition-colors hover:text-violet-600">{t.nav.companies}</a>
 		</div>
 
 		<div class="flex items-center gap-3">
-			<div class="inline-flex items-center rounded-full border border-slate-200 bg-white p-1 text-xs font-semibold text-slate-500">
-				<a
-					href={langHref('it')}
-					class:list={[
-						'rounded-full px-2.5 py-1 transition-colors',
-						lang === 'it' ? 'bg-slate-900 text-white' : 'hover:text-slate-800',
-					]}
-				>
-					IT
-				</a>
-				<a
-					href={langHref('en')}
-					class:list={[
-						'rounded-full px-2.5 py-1 transition-colors',
-						lang === 'en' ? 'bg-slate-900 text-white' : 'hover:text-slate-800',
-					]}
-				>
-					EN
-				</a>
-			</div>
-
 			<a
 				href={loginUrl}
-				class="inline-flex items-center rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(16,185,129,0.25)] transition-transform duration-300 hover:scale-[1.02]"
+				class="inline-flex items-center rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(37,99,235,0.25)] transition-transform duration-300 hover:scale-[1.02]"
 			>
 				{t.nav.login}
 			</a>

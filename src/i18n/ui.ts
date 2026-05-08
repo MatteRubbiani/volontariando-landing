@@ -7,277 +7,145 @@ export type Language = keyof typeof languages;
 
 export const defaultLang: Language = 'it';
 
+const italianUi = {
+	seo: {
+		title: 'Volontariando | Connettiamo comunità, associazioni e imprese',
+		description:
+			'Abbiamo creato Volontariando per connettere cittadini, associazioni del Terzo Settore e imprese locali. Riduciamo gli attriti, semplifichiamo il matching e rendiamo il volontariato accessibile e misurabile per tutta la comunità.',
+	},
+	concept:
+		'Abbiamo costruito un ecosistema digitale che unisce cittadini, associazioni del Terzo Settore e imprese locali in un unico flusso operativo.',
+	nav: {
+		volunteers: 'Volontari',
+		associations: 'Associazioni',
+		companies: 'Imprese e ESG',
+		login: 'Accedi alla piattaforma',
+	},
+	hero: {
+		eyebrow: 'La nostra missione',
+		title: 'Connettiamo il volontariato locale, senza attriti',
+		subtitle:
+			'Abbiamo progettato Volontariando per semplificare il matching tra persone, enti e imprese, accelerare l’attivazione e rendere ogni risultato tracciabile per tutta la comunità.',
+		primaryCta: 'Accedi ora',
+		secondaryLink: 'Scopri come funziona',
+		cards: [
+			{
+				title: 'Connettiamo chi vuole agire',
+				description: 'Mettiamo in relazione cittadini, associazioni e imprese in uno spazio unico e immediato.',
+			},
+			{
+				title: 'Semplifichiamo ogni passaggio',
+				description: 'Riduciamo burocrazia e complessità con percorsi guidati, veloci e facili da gestire.',
+			},
+			{
+				title: 'Misuriamo il valore generato',
+				description: 'Trasformiamo attività e risultati in dati chiari, utili per decidere meglio e crescere insieme.',
+			},
+		],
+		metrics: [
+			{
+				label: 'Cittadini',
+				title: 'Partecipazione più semplice',
+				description: 'Aiutiamo ogni persona a trovare opportunità pertinenti e ad attivarsi anche con poco tempo.',
+			},
+			{
+				label: 'Associazioni',
+				title: 'Gestione più leggera',
+				description: 'Affianchiamo gli enti con strumenti concreti per attrarre volontari adatti e monitorare attività.',
+			},
+			{
+				label: 'Imprese',
+				title: 'ESG con evidenze concrete',
+				description: 'Mettiamo a disposizione indicatori pronti per rendicontazione sociale ESG e bilanci di sostenibilità.',
+			},
+		],
+	},
+	volunteers: {
+		eyebrow: 'Per i volontari',
+		title: 'Ti aiutiamo a trovare il contributo giusto',
+		description:
+			'Sappiamo quanto siano frustranti informazioni sparse, burocrazia e tempi lunghi: per questo ti aiutiamo a partecipare in modo più semplice, rapido e concreto.',
+		cards: [
+			{
+				eyebrow: 'Matching intelligente',
+				title: 'Ti proponiamo opportunità davvero coerenti',
+				description:
+					'Abbiamo creato un matching intelligente che incrocia interessi, competenze e tempo disponibile per aiutarti a scegliere meglio.',
+			},
+			{
+				eyebrow: 'Crescita personale',
+				title: 'Diamo valore alle tue soft skill',
+				description:
+					'Vogliamo valorizzare quello che impari sul campo: collaborazione, leadership, problem solving e capacità organizzative.',
+			},
+			{
+				eyebrow: 'Tracciamento esperienze',
+				title: 'Tracciamo ore ed esperienze utili al tuo percorso',
+				description:
+					'Ti diamo strumenti chiari per documentare attività e ore svolte, così ottieni attestazioni utili anche per il curriculum.',
+			},
+		],
+		cta: 'Registrati come volontario',
+	},
+	associations: {
+		eyebrow: 'Per le associazioni',
+		title: 'Siamo qui per aiutarvi a fare di più con meno risorse',
+		description:
+			'Sappiamo quanto sia difficile gestire attività, persone e adempimenti con team ridotti: vi aiutiamo a raccontarvi meglio, trovare candidati adatti e alleggerire il lavoro operativo.',
+		cards: [
+			{
+				eyebrow: 'Schede volontariato',
+				title: 'Vi aiutiamo a pubblicare richieste chiare',
+				description:
+					'Vi forniamo strumenti per creare schede complete e immediate, con obiettivi, attività, tempi e modalità di partecipazione.',
+			},
+			{
+				eyebrow: 'Candidature coerenti',
+				title: 'Vi aiutiamo a trovare candidati più pertinenti',
+				description:
+					'Con requisiti chiari e competenze sviluppabili, vi aiutiamo a ricevere candidature davvero in linea con la vostra missione.',
+			},
+			{
+				eyebrow: 'Monitoraggio attività',
+				title: 'Alleggeriamo il peso della rendicontazione',
+				description:
+					'Vi aiutiamo a monitorare presenze, ore e avanzamento con dati ordinati, così potete concentrarvi sull’impatto sociale.',
+			},
+		],
+		cta: 'Attiva il profilo associazione',
+	},
+	companies: {
+		eyebrow: 'Per imprese e sostenibilità ESG',
+		title: 'Lavoriamo al vostro fianco per una responsabilità sociale concreta',
+		description:
+			'Vi forniamo strumenti operativi, pensati soprattutto per le PMI, per attivare iniziative sociali senza costruire team interni dedicati.',
+		cards: [
+			{
+				eyebrow: 'Partnership territoriali',
+				title: 'Facilitiamo partnership territoriali affidabili',
+				description:
+					'Vi aiutiamo a connettervi con enti affidabili per erogazioni liberali, donazioni e sponsorizzazioni, con accesso sicuro e trasparente a benefici e incentivi fiscali.',
+			},
+			{
+				eyebrow: 'Volontariato aziendale',
+				title: 'Attiviamo programmi in tempi rapidi',
+				description:
+					'Vi aiutiamo a organizzare iniziative di team building solidale con percorsi snelli e coordinamento immediato.',
+			},
+			{
+				eyebrow: 'Impatto e rendicontazione',
+				title: 'Vi mettiamo a disposizione dashboard pronte all’uso',
+				description:
+					'Tracciamo insieme l’impatto con grafici e dati pronti per semplificare rendicontazione ESG e bilanci di sostenibilità.',
+			},
+		],
+		cta: 'Attiva il percorso ESG',
+	},
+} as const;
+
 export const ui = {
-	it: {
-		seo: {
-			title: 'Volontariando | Corporate Volunteering e impatto misurabile',
-			description:
-				"Piattaforma multilingua per Corporate Volunteering, ESG Reporting e Social Responsibility con Volunteer Management, matching e impatto misurabile.",
-		},
-		concept:
-			"Una piattaforma multilingua per attivare volontari, associazioni e aziende con processi moderni e risultati misurabili.",
-		nav: {
-			volunteers: 'Volontari',
-			associations: 'Associazioni',
-			companies: 'Corporate Volunteering',
-			login: 'Accedi',
-		},
-		hero: {
-			eyebrow: 'Social innovation platform',
-			title: "L'evoluzione digitale del volontariato",
-			subtitle:
-				'Costruiamo una nuova infrastruttura civica per attivare persone, organizzazioni e aziende con processi moderni e risultati misurabili.',
-			primaryCta: 'Inizia ora',
-			secondaryLink: 'Esplora la piattaforma',
-			cards: [
-				{
-					title: 'Accessibile by design',
-					description: 'Esperienza semplice per partecipare, coordinare iniziative e partire senza attrito.',
-				},
-				{
-					title: 'Misurabile in tempo reale',
-					description: "Dati chiari sull'impatto generato, utili a volontari, enti e stakeholder.",
-				},
-				{
-					title: 'Impatto che scala',
-					description: 'Una regia unica che accelera la collaborazione tra cittadini, nonprofit e imprese.',
-				},
-			],
-			metrics: [
-				{
-					label: 'Cittadini',
-					title: 'People first',
-					description: 'Esperienze progettate per attivare comunita locali in modo continuativo.',
-				},
-				{
-					label: 'Nonprofit',
-					title: 'Execution layer',
-					description: 'Strumenti operativi per accelerare onboarding e coordinamento sul campo.',
-				},
-				{
-					label: 'Aziende',
-					title: 'Measurable impact',
-					description: 'KPI e reporting ESG per decisioni rapide e accountability trasparente.',
-				},
-			],
-		},
-		volunteers: {
-			eyebrow: 'Per volontari',
-			title: 'Talento civico, risultati concreti.',
-			description:
-				'Ogni persona puo trovare il contesto giusto per contribuire, con percorsi guidati e tracciamento del valore generato.',
-			cards: [
-				{
-					eyebrow: 'Skill-based volunteering',
-					title: 'Opportunita in linea con il tuo profilo',
-					description:
-						'Il matching valorizza skill, disponibilita e interessi per proporre attivita ad alta rilevanza personale e sociale.',
-				},
-				{
-					eyebrow: 'Interactive Map',
-					title: 'Cause vicine, impatto immediato',
-					description:
-						"Visualizza in pochi secondi le opportunita nel tuo territorio e unisciti alle iniziative con onboarding rapido.",
-				},
-				{
-					eyebrow: 'Volunteer Management',
-					title: 'Esperienze utili anche alla crescita',
-					description:
-						'Competenze e contributi restano tracciati in modo chiaro per raccontare il tuo impatto con credibilita.',
-				},
-			],
-			cta: 'Registrati come volontario',
-		},
-		associations: {
-			eyebrow: 'Digital Transformation',
-			title: 'Digitalizza i processi, rafforza la fiducia verificata.',
-			description:
-				'Semplifica la gestione operativa e attiva una rete affidabile per crescere con partner, volontari e aziende.',
-			cards: [
-				{
-					eyebrow: 'Volunteer Management',
-					title: 'Dal recruiting alla conferma presenze',
-					description:
-						'Flussi digitali per candidature, turni, comunicazioni e coordinamento operativo in un unico ambiente.',
-				},
-				{
-					eyebrow: 'Verified Network',
-					title: 'Collaborazioni trasparenti e sicure',
-					description:
-						'Profili verificati e governance chiara per costruire partnership solide con cittadini e stakeholder territoriali.',
-				},
-				{
-					eyebrow: 'Digital Transformation',
-					title: 'Meno attrito, piu impatto',
-					description:
-						'Riduci il carico amministrativo e concentra il team su attivazione volontari e obiettivi sociali misurabili.',
-				},
-			],
-			cta: "Attiva l'associazione",
-		},
-		companies: {
-			eyebrow: 'Corporate Volunteering',
-			title: 'Strategie ESG che diventano impatto reale.',
-			description:
-				'Progetta iniziative di volontariato aziendale, coordina team interni e trasforma le attivita in evidenze misurabili.',
-			cards: [
-				{
-					eyebrow: 'ESG Reporting',
-					title: 'Programmi sociali allineati al business',
-					description:
-						'Definisci priorita, obiettivi e governance ESG con una roadmap operativa integrata.',
-				},
-				{
-					eyebrow: 'Social Responsibility',
-					title: 'Team engagement su progetti ad alto valore',
-					description:
-						'Attiva dipendenti e ambassador con iniziative coordinate insieme a enti nonprofit verificati.',
-				},
-				{
-					eyebrow: 'Impact Reporting',
-					title: 'Misurazione pronta per stakeholder e board',
-					description:
-						'Dati tracciabili e KPI leggibili per reporting ESG, comunicazione istituzionale e decisioni data-driven.',
-				},
-			],
-			cta: 'Attiva il piano ESG',
-		},
-	},
-	en: {
-		seo: {
-			title: 'Volontariando | Corporate Volunteering with measurable impact',
-			description:
-				'Multilingual platform for Corporate Volunteering, ESG Reporting and Social Responsibility with skill-based volunteer management and measurable impact.',
-		},
-		concept:
-			'A multilingual platform connecting citizens, nonprofits and businesses through modern workflows and measurable outcomes.',
-		nav: {
-			volunteers: 'Volunteers',
-			associations: 'Nonprofits',
-			companies: 'Corporate Volunteering',
-			login: 'Login',
-		},
-		hero: {
-			eyebrow: 'Social innovation platform',
-			title: 'The digital evolution of volunteering',
-			subtitle:
-				'We are building a modern civic infrastructure to activate people, nonprofits and businesses with measurable outcomes.',
-			primaryCta: 'Start now',
-			secondaryLink: 'Explore the platform',
-			cards: [
-				{
-					title: 'Accessible by design',
-					description: 'A smooth experience to participate, coordinate and launch initiatives faster.',
-				},
-				{
-					title: 'Measurable in real time',
-					description: 'Clear impact data for volunteers, nonprofits and institutional stakeholders.',
-				},
-				{
-					title: 'Built to scale impact',
-					description: 'One shared operating layer connecting citizens, nonprofits and businesses.',
-				},
-			],
-			metrics: [
-				{
-					label: 'Citizens',
-					title: 'People first',
-					description: 'Experiences designed to activate local communities with continuity.',
-				},
-				{
-					label: 'Nonprofits',
-					title: 'Execution layer',
-					description: 'Operational tools to accelerate onboarding and field coordination.',
-				},
-				{
-					label: 'Businesses',
-					title: 'Measurable impact',
-					description: 'Clear ESG KPI and reporting for fast decisions and transparent accountability.',
-				},
-			],
-		},
-		volunteers: {
-			eyebrow: 'For volunteers',
-			title: 'Civic talent, measurable outcomes.',
-			description:
-				'Every person can find the right way to contribute through guided journeys and clear impact tracking.',
-			cards: [
-				{
-					eyebrow: 'Skill-based volunteering',
-					title: 'Opportunities aligned with your profile',
-					description:
-						'Matching combines skills, availability and interests to suggest high-relevance opportunities.',
-				},
-				{
-					eyebrow: 'Interactive Map',
-					title: 'Nearby causes, immediate action',
-					description:
-						'Discover local opportunities quickly and join initiatives with a fast onboarding flow.',
-				},
-				{
-					eyebrow: 'Volunteer Management',
-					title: 'Experience that strengthens your journey',
-					description:
-						'Contributions and skills are clearly tracked so you can communicate your impact credibly.',
-				},
-			],
-			cta: 'Sign up as a volunteer',
-		},
-		associations: {
-			eyebrow: 'Digital Transformation',
-			title: 'Digitize operations, strengthen verified trust.',
-			description:
-				'Simplify execution and activate a reliable network to grow with volunteers, partners and companies.',
-			cards: [
-				{
-					eyebrow: 'Volunteer Management',
-					title: 'From recruiting to attendance validation',
-					description:
-						'Digital workflows for applications, shifts, communication and coordination in one platform.',
-				},
-				{
-					eyebrow: 'Verified Network',
-					title: 'Transparent and secure collaboration',
-					description:
-						'Verified profiles and clear governance to build durable partnerships with stakeholders.',
-				},
-				{
-					eyebrow: 'Digital Transformation',
-					title: 'Less admin, more impact',
-					description:
-						'Reduce operational friction and focus teams on volunteer activation and social outcomes.',
-				},
-			],
-			cta: 'Activate your nonprofit',
-		},
-		companies: {
-			eyebrow: 'Corporate Volunteering',
-			title: 'ESG strategies turned into real impact.',
-			description:
-				'Design corporate volunteering programs, coordinate teams and convert actions into measurable evidence.',
-			cards: [
-				{
-					eyebrow: 'ESG Reporting',
-					title: 'Social programs aligned with business goals',
-					description:
-						'Define priorities, governance and ESG objectives with a clear operational roadmap.',
-				},
-				{
-					eyebrow: 'Social Responsibility',
-					title: 'Team engagement through high-value initiatives',
-					description:
-						'Activate employees and ambassadors with coordinated projects and verified nonprofit partners.',
-				},
-				{
-					eyebrow: 'Impact Reporting',
-					title: 'Measurable evidence for stakeholders and board',
-					description:
-						'Traceable data and clear KPI for ESG reporting, institutional storytelling and decisions.',
-				},
-			],
-			cta: 'Activate your ESG plan',
-		},
-	},
+	it: italianUi,
+	en: italianUi,
 } as const;
 
 export const getLangFromUrl = (url: URL): Language => {
