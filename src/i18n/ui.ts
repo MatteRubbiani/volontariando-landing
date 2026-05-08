@@ -62,27 +62,27 @@ const italianUi = {
 	},
 	volunteers: {
 		eyebrow: 'Per i volontari',
-		title: 'Ti aiutiamo a trovare il contributo giusto',
+		title: 'Trova il tuo spazio per fare la differenza',
 		description:
-			'Sappiamo quanto siano frustranti informazioni sparse, burocrazia e tempi lunghi: per questo ti aiutiamo a partecipare in modo più semplice, rapido e concreto.',
+			'Noi semplifichiamo il cammino dal desiderio di agire alla scelta concreta. Creiamo percorsi trasparenti e immediati, sgomberi da complessità, dove il tuo impegno trova significato e traccia.',
 		cards: [
 			{
 				eyebrow: 'Matching intelligente',
-				title: 'Ti proponiamo opportunità davvero coerenti',
+				title: 'Opportunità pensate per te',
 				description:
-					'Abbiamo creato un matching intelligente che incrocia interessi, competenze e tempo disponibile per aiutarti a scegliere meglio.',
+					'Utilizziamo algoritmi sofisticati per incrociare interessi, competenze e tempo disponibile. Ogni proposta è ponderata, non casuale. Ti guidiamo verso scelte coerenti e consapevoli.',
 			},
 			{
-				eyebrow: 'Crescita personale',
-				title: 'Diamo valore alle tue soft skill',
+				eyebrow: 'Comunità inclusiva e protetta',
+				title: 'Stringi legami in uno spazio sicuro',
 				description:
-					'Vogliamo valorizzare quello che impari sul campo: collaborazione, leadership, problem solving e capacità organizzative.',
+					'Entri in una comunità dove non c\'è spazio per giudizi, pregiudizi o dinamiche tossiche. Crediamo che il volontariato sia straordinaria occasione di socialità autentica: conosci persone che condividono i tuoi valori, fai rete e tessi legami significativi in un ambiente completamente protetto e accogliente.',
 			},
 			{
-				eyebrow: 'Tracciamento esperienze',
-				title: 'Tracciamo ore ed esperienze utili al tuo percorso',
+				eyebrow: 'Crescita e riconoscimento',
+				title: 'Valorizza competenze che sviluppi davvero',
 				description:
-					'Ti diamo strumenti chiari per documentare attività e ore svolte, così ottieni attestazioni utili anche per il curriculum.',
+					'Tracciamo ore e esperienze. Le soft skill che costruisci - collaborazione, leadership, problem solving - diventano attestazioni concrete, parte del tuo profilo professionale e del tuo percorso di sviluppo.',
 			},
 		],
 		cta: 'Registrati come volontario',
