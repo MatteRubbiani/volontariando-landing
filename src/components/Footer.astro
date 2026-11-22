@@ -1,4 +1,5 @@
 ---
+import BrandLogo from './NextLogo.astro';
 // Footer.astro - Footer component - Tailwind v4
 ---
 
@@ -9,9 +10,7 @@
 			<!-- Brand Column -->
 			<div>
 				<div class="flex items-center gap-2 mb-6">
-					<div class="w-8 h-8 rounded-lg bg-linear-to-br from-emerald-600 to-blue-600 flex items-center justify-center">
-						<span class="text-white font-black text-sm">V</span>
-					</div>
+					<BrandLogo class="h-8 w-8 shrink-0" />
 					<span class="font-black text-lg text-slate-900">Volontariando</span>
 				</div>
 				<p class="text-slate-600 text-sm leading-relaxed">

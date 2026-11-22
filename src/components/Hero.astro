@@ -1,4 +1,5 @@
 ---
+import BrandLogo from './NextLogo.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/ui';
 
 const lang = getLangFromUrl(Astro.url);
@@ -13,6 +14,9 @@ const t = useTranslations(lang);
 
 	<div class="relative mx-auto max-w-7xl">
 		<div class="mx-auto max-w-4xl text-center">
+			<div class="reveal-on-scroll mb-5 flex justify-center transition-all duration-1000 ease-out">
+				<BrandLogo class="h-14 w-14 sm:h-16 sm:w-16" />
+			</div>
 			<p class="text-[10px] font-black uppercase tracking-widest text-blue-600">{t.hero.eyebrow}</p>
 			<h1 class="reveal-on-scroll mt-5 text-4xl font-black tracking-tight text-slate-900 transition-all duration-1000 ease-out sm:text-5xl lg:text-6xl">
 				{t.hero.title}

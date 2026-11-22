@@ -14,7 +14,7 @@ const italianUi = {
 			'Abbiamo creato Volontariando per connettere cittadini, associazioni del Terzo Settore e imprese locali. Riduciamo gli attriti, semplifichiamo il matching e rendiamo il volontariato accessibile e misurabile per tutta la comunità.',
 	},
 	concept:
-		'Abbiamo costruito un ecosistema digitale che unisce cittadini, associazioni del Terzo Settore e imprese locali in un unico flusso operativo.',
+		"Volontari, Associazioni e Imprese in un'unica piattaforma.",
 	nav: {
 		volunteers: 'Volontari',
 		associations: 'Associazioni',
@@ -23,7 +23,7 @@ const italianUi = {
 	},
 	hero: {
 		eyebrow: 'La nostra missione',
-		title: 'Connettiamo il volontariato locale, senza attriti',
+		title: 'Il terzo settore in un unica piattaforma',
 		subtitle:
 			'Abbiamo progettato Volontariando per semplificare il matching tra persone, enti e imprese, accelerare l’attivazione e rendere ogni risultato tracciabile per tutta la comunità.',
 		primaryCta: 'Accedi ora',
@@ -35,7 +35,7 @@ const italianUi = {
 			},
 			{
 				title: 'Semplifichiamo ogni passaggio',
-				description: 'Riduciamo burocrazia e complessità con percorsi guidati, veloci e facili da gestire.',
+				description: 'Crea un account in pochi secondi ed esplora le oppportunità vicino a te.',
 			},
 			{
 				title: 'Misuriamo il valore generato',
@@ -44,9 +44,9 @@ const italianUi = {
 		],
 		metrics: [
 			{
-				label: 'Cittadini',
+				label: 'Volontari',
 				title: 'Partecipazione più semplice',
-				description: 'Aiutiamo ogni persona a trovare opportunità pertinenti e ad attivarsi anche con poco tempo.',
+				description: "Abbattiamo le barriere d'ingresso per entrare nelle comunità",
 			},
 			{
 				label: 'Associazioni',

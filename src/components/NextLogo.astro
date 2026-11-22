@@ -1,0 +1,39 @@
+---
+interface Props {
+    class?: string;
+    title?: string;
+}
+
+const { class: className = '', title = 'Logo Volontariando' }: Props = Astro.props;
+---
+
+<span
+    aria-label={title}
+    class={`inline-flex aspect-square items-center justify-center overflow-visible ${className}`.trim()}
+    role="img"
+>
+    <svg
+        aria-hidden="true"
+        fill="none"
+        height="100%"
+        viewBox="0 0 301 217"
+        width="100%"
+        xmlns="http://www.w3.org/2000/svg"
+        style="width: 100%; height: 100%;"
+    >
+        <path d="M150.301 43.3013L75.3013 86.6025V0L150.301 43.3013Z" fill="#FF771C"/>
+        <path d="M150 129.904L75 86.6025L150 43.3013V129.904Z" fill="#FFD891"/>
+        <path d="M75 0.30127V86.9038L0 43.6025L75 0.30127Z" fill="#FFB84D"/>
+        <path d="M75.3013 86.3013L0.30127 129.603V43L75.3013 86.3013Z" fill="#FFD891"/>
+        <path d="M150.301 130.301L75.3013 173.603V87L150.301 130.301Z" fill="#FF771C"/>
+        <path d="M75 87.3013V173.904L0 130.603L75 87.3013Z" fill="#FFB84D"/>
+        <path d="M300.301 43.3013L225.301 86.6025V0L300.301 43.3013Z" fill="#FF771C"/>
+        <path d="M300 129.904L225 86.6025L300 43.3013V129.904Z" fill="#FFD891"/>
+        <path d="M225 0.30127V86.9038L150 43.6025L225 0.30127Z" fill="#FFD891"/>
+        <path d="M225.301 86.3013L150.301 129.603V43L225.301 86.3013Z" fill="#FFB84D"/>
+        <path d="M149.603 216.904L74.6025 173.603L149.603 130.301V216.904Z" fill="#FFD891"/>
+        <path d="M224.904 173.301L149.904 216.603V130L224.904 173.301Z" fill="#FF771C"/>
+        <path d="M300.301 130.301L225.301 173.603V87L300.301 130.301Z" fill="#FFB84D"/>
+        <path d="M224.603 86.3013V172.904L149.603 129.603L224.603 86.3013Z" fill="#FFD891"/>
+    </svg>
+</span>

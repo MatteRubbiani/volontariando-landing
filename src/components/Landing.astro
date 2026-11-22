@@ -1,0 +1,315 @@
+---
+import BrandLogo from './NextLogo.astro';
+---
+
+<nav class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#07111f]/90 backdrop-blur-xl">
+	<div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 lg:px-8">
+		<a href="#top" class="flex items-center gap-2.5 text-white">
+			<BrandLogo class="h-8 w-8" />
+			<span class="text-lg font-black tracking-tight">Volontariando</span>
+		</a>
+		<div class="hidden items-center gap-7 lg:flex">
+			<a href="#problema" class="nav-link">Problema</a>
+			<a href="#piattaforma" class="nav-link">Piattaforma</a>
+			<a href="#potenziale" class="nav-link">Potenziale</a>
+			<a href="#partner" class="nav-link">Partner</a>
+			<a href="#team" class="nav-link">Chi siamo</a>
+		</div>
+		<a href="#contatti" class="rounded-full bg-[#ffb84d] px-4 py-2 text-sm font-black text-[#07111f] transition hover:bg-[#ffc874]">
+			Parliamone
+		</a>
+	</div>
+</nav>
+
+<main class="overflow-hidden bg-[#07111f] text-[#f7f8f4]">
+	<section id="top" class="relative min-h-[760px] pt-16">
+		<div class="hero-grid absolute inset-0 opacity-40"></div>
+		<div class="absolute -right-40 top-20 h-[520px] w-[520px] rounded-full bg-[#2f67ff]/20 blur-[120px]"></div>
+		<div class="relative mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 lg:grid-cols-[0.92fr_1.08fr] lg:px-8 lg:py-28">
+			<div class="reveal-on-scroll">
+				<h1 class="max-w-3xl text-5xl leading-[0.98] font-black tracking-[-0.055em] sm:text-6xl lg:text-[78px]">
+					Il volontariato diventa <span class="text-[#ffb84d]">parte della vita.</span>
+				</h1>
+				<p class="mt-7 max-w-xl text-lg leading-relaxed text-[#b9c2cf] sm:text-xl">
+					Connettiamo cittadini, enti del Terzo Settore e imprese in un unico ecosistema semplice, verificabile e orientato all’impatto.
+				</p>
+				<div class="mt-9 flex flex-col gap-3 sm:flex-row">
+					<a href="#contatti" class="inline-flex items-center justify-center rounded-full bg-[#ffb84d] px-7 py-4 font-black text-[#07111f] transition hover:-translate-y-0.5 hover:bg-[#ffc874]">
+						Richiedi il deck
+						<span class="ml-3">↗</span>
+					</a>
+					<a href="#piattaforma" class="inline-flex items-center justify-center rounded-full border border-white/15 px-7 py-4 font-bold text-white transition hover:border-white/30 hover:bg-white/5">
+						Vedi come funziona
+					</a>
+				</div>
+			</div>
+
+			<div class="reveal-on-scroll relative mx-auto w-full max-w-[620px]" style="transition-delay: 120ms">
+				<div class="absolute -inset-10 rounded-full bg-[#2f67ff]/15 blur-3xl"></div>
+				<div class="dashboard relative rotate-[1deg] rounded-[28px] border border-white/10 bg-[#101c2d] p-3 shadow-2xl shadow-black/40 sm:p-4">
+					<div class="rounded-[20px] bg-[#f4f6f1] p-4 text-[#10203a] sm:p-5">
+						<div class="flex items-center justify-between border-b border-[#dfe4dc] pb-4">
+							<div class="flex items-center gap-2">
+								<BrandLogo class="h-9 w-9" />
+								<div>
+									<p class="text-xs font-black">Volontariando</p>
+									<p class="text-[9px] text-[#75808d]">Esplora opportunità</p>
+								</div>
+							</div>
+							<div class="h-8 w-8 rounded-full bg-[#ffd891]"></div>
+						</div>
+						<div class="mt-4 grid grid-cols-[1fr_0.42fr] gap-3">
+							<div class="rounded-2xl border border-[#e1e5dc] bg-white p-4">
+								<div class="flex items-center justify-between">
+									<div>
+										<p class="text-[9px] font-bold uppercase tracking-widest text-[#87918e]">Vicino a te</p>
+										<p class="mt-1 text-sm font-black">Attività di comunità</p>
+									</div>
+									<span class="rounded-full bg-[#dfeaff] px-2 py-1 text-[9px] font-black text-[#2f67ff]">12 nuove</span>
+								</div>
+								<div class="mt-4 space-y-2">
+									<div class="activity-row"><span class="activity-icon bg-[#b9d5ff]">A</span><div><b>Ambiente & natura</b><small>3h · 2 km</small></div><strong>92%</strong></div>
+									<div class="activity-row"><span class="activity-icon bg-[#ffe1a8]">S</span><div><b>Supporto scolastico</b><small>4h · 4 km</small></div><strong>87%</strong></div>
+									<div class="activity-row"><span class="activity-icon bg-[#b9e4d2]">C</span><div><b>Inclusione sociale</b><small>2h · 6 km</small></div><strong>81%</strong></div>
+								</div>
+							</div>
+							<div class="rounded-2xl bg-[#2f67ff] p-4 text-white">
+								<p class="text-[9px] font-bold uppercase tracking-widest text-[#d7e4ff]">Impatto</p>
+								<p class="mt-5 text-3xl font-black">24h</p>
+								<p class="mt-1 text-[9px] text-[#d7e4ff]">questo mese</p>
+								<div class="mt-5 flex h-20 items-end gap-1">
+									<i class="bar h-[28%]"></i><i class="bar h-[48%]"></i><i class="bar h-[38%]"></i><i class="bar h-[72%]"></i><i class="bar h-[58%]"></i><i class="bar h-[88%]"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="border-y border-white/8 bg-[#0b1728]">
+		<div class="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-white/8 px-5 lg:grid-cols-4 lg:px-8">
+			<div class="stat-cell"><strong>4,7 mln</strong><span>persone coinvolte in volontariato nel 2023</span></div>
+			<div class="stat-cell"><strong>−1,9 mln</strong><span>calo rispetto al 2013 nella partecipazione</span></div>
+			<div class="stat-cell"><strong>3 vie</strong><span>cittadini, enti e imprese in un solo circuito</span></div>
+			<div class="stat-cell"><strong>ESG</strong><span>dati verificabili per la rendicontazione</span></div>
+		</div>
+	</section>
+
+	<section id="problema" class="bg-[#07111f] py-24 text-white lg:py-32">
+		<div class="mx-auto max-w-7xl px-5 lg:px-8">
+			<div class="grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
+				<div>
+					<p class="section-kicker text-[#2f67ff]">Il problema</p>
+					<h2 class="mt-5 text-4xl font-black leading-tight tracking-tight sm:text-5xl">Un valore enorme,<br />bloccato da attriti.</h2>
+				</div>
+				<div class="grid gap-5 sm:grid-cols-2">
+					<article class="problem-card">
+						<span>01</span>
+						<h3>Il volontariato è difficile da trovare</h3>
+						<p>Annunci vaghi, appuntamenti rigidi e moduli cartacei trasformano una buona intenzione in una rinuncia.</p>
+					</article>
+					<article class="problem-card">
+						<span>02</span>
+						<h3>Gli enti perdono tempo in burocrazia</h3>
+						<p>Turni, presenze, assicurazioni e rendicontazioni assorbono risorse preziose sottratte alle attività sul campo.</p>
+					</article>
+					<article class="problem-card">
+						<span>03</span>
+						<h3>Le imprese faticano a dimostrare l’impatto</h3>
+						<p>Senza dati certi, il volontariato d’impresa resta difficile da organizzare e da usare nella rendicontazione ESG.</p>
+					</article>
+					<article class="problem-card border-[#10203a] bg-[#10203a] text-white">
+						<span class="text-[#ffb84d]">ISTAT · 2023</span>
+						<h3>4,7 milioni di persone hanno fatto volontariato</h3>
+						<p class="text-[#c3cbd5]">Una base sociale ampia. Eppure la partecipazione è diminuita del 3,6 punti rispetto al 2013.</p>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="piattaforma" class="bg-[#07111f] pb-24 text-white lg:pb-32">
+		<div class="mx-auto max-w-7xl px-5 lg:px-8">
+			<div class="rounded-[36px] border border-white/8 bg-[#10203a] p-6 sm:p-10 lg:p-14">
+				<div class="mx-auto max-w-2xl text-center">
+					<p class="section-kicker text-[#ffb84d]">Come funziona</p>
+					<h2 class="mt-5 text-4xl font-black tracking-tight sm:text-5xl">Da una buona intenzione<br />a un impatto concreto.</h2>
+				</div>
+				<div class="mt-14 grid gap-5 lg:grid-cols-3">
+					<article class="step-card">
+						<div class="step-number">1</div>
+						<h3>Scopri</h3>
+						<p>Trova opportunità vicine, trasparenti e compatibili con il tempo realmente disponibile.</p>
+						<div class="step-visual">
+							<span class="chip">📍 Vicino a te</span><span class="chip">⏱ 2–4 ore</span><span class="chip">♥ Ambiente</span>
+						</div>
+					</article>
+					<article class="step-card">
+						<div class="step-number">2</div>
+						<h3>Agisci</h3>
+						<p>Iscriviti in pochi clic, con turni e responsabilità chiari, direttamente sul campo.</p>
+						<div class="step-visual flex-col items-stretch">
+							<div class="mini-check"><span>✓</span><b>Disponibilità confermata</b></div>
+							<div class="mini-check"><span>✓</span><b>Documenti completati</b></div>
+						</div>
+					</article>
+					<article class="step-card">
+						<div class="step-number">3</div>
+						<h3>Misura</h3>
+						<p>Ore, competenze e risultati diventano evidenze verificabili per persone, enti e imprese.</p>
+						<div class="step-visual items-end gap-2">
+							<i class="impact-bar h-8"></i><i class="impact-bar h-12"></i><i class="impact-bar h-16"></i><i class="impact-bar h-20"></i>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-[#07111f] py-24 lg:py-32">
+		<div class="mx-auto max-w-7xl px-5 lg:px-8">
+			<div class="mb-12 max-w-2xl">
+				<p class="section-kicker text-[#ffb84d]">Un ecosistema a tre vie</p>
+				<h2 class="mt-5 text-4xl font-black tracking-tight sm:text-5xl">Ciascuno porta valore.<br />Tutti lo ritrovano.</h2>
+			</div>
+			<div class="grid gap-5 lg:grid-cols-3">
+				<article class="ecosystem-card border-[#2f67ff]/30 bg-[#10203a]">
+					<div class="ecosystem-icon text-[#9cc5ff]">01</div>
+					<h3>Cittadini</h3>
+					<p>Opportunità vicine, flessibili e trasparenti. Un portfolio digitale certifica ore e competenze.</p>
+					<ul><li>Micro-volontariato</li><li>Profilo e attestazioni</li><li>Matching per interessi</li></ul>
+				</article>
+				<article class="ecosystem-card border-[#53c5a2]/30 bg-[#10283a]">
+					<div class="ecosystem-icon text-[#7de0bf]">02</div>
+					<h3>Enti del Terzo Settore</h3>
+					<p>Gestione integrata di turni, presenze e comunicazione, con visibilità e strumenti.</p>
+					<ul><li>Vetrina pubblica</li><li>Calendario e candidati</li><li>Rendicontazione rapida</li></ul>
+				</article>
+				<article class="ecosystem-card border-[#ffb84d]/30 bg-[#2a2533]">
+					<div class="ecosystem-icon text-[#ffd38f]">03</div>
+					<h3>Imprese</h3>
+					<p>Programmi chiavi in mano e dashboard ESG per misurare ore, partecipazione e impatto territoriale.</p>
+					<ul><li>Team building solidale</li><li>Servizi pro-bono</li><li>Dati per la rendicontazione</li></ul>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section id="potenziale" class="bg-[#0b1728] py-24 text-white lg:py-32">
+		<div class="mx-auto max-w-7xl px-5 lg:px-8">
+			<div class="grid items-end gap-10 lg:grid-cols-[1fr_0.8fr]">
+				<div>
+					<p class="section-kicker text-[#2f67ff]">Perché adesso</p>
+					<h2 class="mt-5 max-w-3xl text-4xl font-black leading-[1.05] tracking-tight sm:text-6xl">La domanda è già sul mercato.<br /><span class="text-[#2f67ff]">Serve l’infrastruttura giusta.</span></h2>
+				</div>
+				<p class="max-w-xl text-lg leading-relaxed text-[#b9c2cf]">
+					Normative europee, pressione ESG e cambiamento dei modelli di lavoro rendono urgente una misura affidabile dell’impatto sociale.
+				</p>
+			</div>
+			<div class="mt-14 grid gap-4 sm:grid-cols-3">
+				<div class="rounded-[28px] border border-white/8 bg-[#10203a] p-8 lg:p-10">
+					<p class="text-xs font-black uppercase tracking-widest text-[#9cc5ff]">Pressione normativa</p>
+					<p class="mt-5 text-5xl font-black text-[#2f67ff]">CSRD</p>
+					<p class="mt-4 text-sm leading-relaxed text-[#c4cdd8]">Le grandi imprese europee devono rendicontare impatti, rischi e opportunità sociali secondo standard comuni.</p>
+					<p class="mt-6 text-xs font-bold text-[#8794a5]">Fonte: Commissione Europea</p>
+				</div>
+				<div class="rounded-[28px] border border-white/8 bg-[#10283a] p-8 lg:p-10">
+					<p class="text-xs font-black uppercase tracking-widest text-[#7de0bf]">Mercato in crescita</p>
+					<p class="mt-5 text-5xl font-black text-[#2f67ff]">50k+</p>
+					<p class="mt-4 text-sm leading-relaxed text-[#c4cdd8]">Le imprese soggette alla CSRD hanno bisogno di dati strutturati sull’impatto sociale delle proprie attività.</p>
+					<p class="mt-6 text-xs font-bold text-[#8794a5]">Riferimento europeo</p>
+				</div>
+				<div class="rounded-[28px] border border-[#ffb84d]/20 bg-[#2a2533] p-8 text-white lg:p-10">
+					<p class="text-xs font-black uppercase tracking-widest text-[#9cc5ff]">Effetto rete</p>
+					<p class="mt-5 text-5xl font-black text-[#ffb84d]">Territorio</p>
+					<p class="mt-4 text-sm leading-relaxed text-[#c5ced8]">Ogni ente verificato rende la rete più utile; ogni impresa finanzia infrastruttura e crescita locale.</p>
+					<p class="mt-6 text-xs font-bold text-[#8794a5]">Il vantaggio strategico di Volontariando</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="partner" class="border-y border-white/8 bg-[#0b1728] py-20">
+		<div class="mx-auto max-w-7xl px-5 lg:px-8">
+			<p class="text-center text-xs font-black uppercase tracking-[0.18em] text-[#91a0b3]">Con chi stiamo collaborando</p>
+			<div class="mt-10 grid gap-4 text-center sm:grid-cols-3">
+				<div class="partner-card"><strong>Impact Hub</strong><span>Innovazione & impatto</span></div>
+				<div class="partner-card"><strong>CREA</strong><span>Ricerca & sviluppo territoriale</span></div>
+				<div class="partner-card"><strong>CSV Estense</strong><span>CSV territoriale</span></div>
+			</div>
+		</div>
+	</section>
+
+	<section id="team" class="bg-[#07111f] py-24 text-white lg:py-32">
+		<div class="mx-auto max-w-7xl px-5 lg:px-8">
+			<div class="grid gap-12 lg:grid-cols-[0.78fr_1.22fr]">
+				<div>
+					<p class="section-kicker text-[#2f67ff]">Chi siamo</p>
+					<h2 class="mt-5 text-4xl font-black leading-tight tracking-tight sm:text-5xl">Costruiamo ponti tra tecnologia e comunità.</h2>
+					<p class="mt-6 text-lg leading-relaxed text-[#b9c2cf]">Siamo un team interdisciplinare con una visione: rendere la partecipazione civica una pratica quotidiana, accessibile e misurabile.</p>
+				</div>
+				<div>
+					<p class="text-xs font-black uppercase tracking-[0.18em] text-[#9cc5ff]">Chi cerchiamo</p>
+					<div class="mt-5 space-y-3">
+						<article class="role-row"><div><span>01</span><h3>Product & Technology</h3></div><p>Persone che vogliono costruire un prodotto utile, robusto e umano.</p><a href="#contatti">Contribuisci →</a></article>
+						<article class="role-row"><div><span>02</span><h3>Growth & Partnerships</h3></div><p>Collaboratori capaci di aprire relazioni con enti, università e imprese.</p><a href="#contatti">Contribuisci →</a></article>
+						<article class="role-row"><div><span>03</span><h3>Impact & Community</h3></div><p>Persone con esperienza nel Terzo Settore, volontariato e cambiamento sociale.</p><a href="#contatti">Contribuisci →</a></article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="contatti" class="relative bg-[#2f67ff] py-24 lg:py-32">
+		<div class="absolute inset-0 opacity-20 hero-grid"></div>
+		<div class="relative mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-[1fr_0.9fr] lg:px-8">
+			<div>
+				<p class="section-kicker text-[#ffd38f]">Parliamone</p>
+				<h2 class="mt-5 text-4xl font-black leading-tight tracking-tight sm:text-6xl">Vuoi conoscere il progetto da vicino?</h2>
+				<p class="mt-6 max-w-lg text-lg leading-relaxed text-[#dfe8ff]">Scegli con noi il prossimo passo: una call conoscitiva, una partnership o la presentazione completa del progetto.</p>
+			</div>
+			<article class="contact-card">
+				<div class="contact-mark"><span>DR</span></div>
+				<div>
+					<p>Contatto diretto</p>
+					<h3>Davide Rivieccio</h3>
+				</div>
+				<a href="mailto:davide.rivieccio@volontariando.it" class="contact-email">
+					davide.rivieccio@volontariando.it
+					<span>↗</span>
+				</a>
+			</article>
+		</div>
+	</section>
+</main>
+
+<footer class="border-t border-white/8 bg-[#07111f] py-8 text-[#9ba7b7]">
+	<div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+		<div class="flex items-center gap-2 text-white"><BrandLogo class="h-7 w-7" /><strong>Volontariando</strong></div>
+		<p class="text-sm">© 2026 Volontariando. Innovazione sociale.</p>
+	</div>
+</footer>
+
+<style>
+	.nav-link { color: #b9c2cf; font-size: 0.875rem; font-weight: 700; transition: color 180ms ease; }
+	.nav-link:hover { color: white; }
+	.hero-grid { background-image: linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px); background-size: 56px 56px; mask-image: linear-gradient(to bottom, black, transparent 92%); }
+	.dashboard { box-shadow: 0 40px 100px rgba(0,0,0,.38), 0 0 0 1px rgba(255,255,255,.03); }
+	.activity-row { display:grid; grid-template-columns:32px 1fr auto; align-items:center; gap:8px; border-radius:10px; background:#f7f8f5; padding:7px; }
+	.activity-row b { display:block; font-size:10px; } .activity-row small { display:block; margin-top:2px; font-size:8px; color:#87918e; } .activity-row strong { font-size:9px; color:#2f67ff; }
+	.activity-icon { display:flex; height:28px; width:28px; align-items:center; justify-content:center; border-radius:8px; font-size:10px; font-weight:900; }
+	.bar { flex:1; border-radius:3px 3px 0 0; background:rgba(255,255,255,.78); }
+	.stat-cell { min-height:145px; padding:28px 20px; } .stat-cell strong { display:block; font-size:28px; } .stat-cell span { display:block; margin-top:8px; max-width:220px; color:#9ba7b7; font-size:12px; line-height:1.5; }
+	.section-kicker { font-size:11px; font-weight:900; text-transform:uppercase; letter-spacing:.18em; }
+	.problem-card { border:1px solid rgba(255,255,255,.09); border-radius:20px; background:#10203a; padding:28px; } .problem-card span { color:#ffb84d; font-size:11px; font-weight:900; } .problem-card h3 { margin-top:30px; color:white; font-size:20px; line-height:1.2; } .problem-card p { margin-top:12px; color:#c4cdd8; font-size:14px; line-height:1.7; }
+	.step-card { position:relative; min-height:390px; border:1px solid rgba(255,255,255,.09); border-radius:24px; background:#07111f; padding:28px; } .step-number { display:flex; height:38px; width:38px; align-items:center; justify-content:center; border-radius:50%; background:#ffb84d; color:#10203a; font-size:13px; font-weight:900; } .step-card h3 { margin-top:28px; color:white; font-size:28px; } .step-card p { margin-top:10px; color:#c4cdd8; font-size:14px; line-height:1.7; }
+	.step-visual { margin-top:30px; display:flex; min-height:95px; flex-wrap:wrap; align-content:center; align-items:center; justify-content:center; gap:8px; border-radius:16px; border:1px solid rgba(255,255,255,.08); background:#10283a; padding:16px; } .chip { border-radius:999px; background:#f4f6f1; color:#10203a; padding:7px 9px; font-size:10px; font-weight:800; box-shadow:0 4px 12px rgba(0,0,0,.12); }
+	.mini-check { display:flex; align-items:center; gap:8px; border-bottom:1px solid rgba(255,255,255,.08); padding:8px; color:#d7dee7; font-size:11px; } .mini-check:last-child { border-bottom:0; } .mini-check span { display:flex; height:22px; width:22px; align-items:center; justify-content:center; border-radius:50%; background:#bfe7d7; color:#10203a; } .impact-bar { width:44px; border-radius:8px 8px 2px 2px; background:#70d2b0; }
+	.ecosystem-card { border:1px solid; border-radius:24px; padding:30px; } .ecosystem-icon { font-size:12px; font-weight:900; } .ecosystem-card h3 { margin-top:32px; font-size:26px; } .ecosystem-card p { margin-top:12px; min-height:90px; color:#c4cdd8; font-size:14px; line-height:1.7; } .ecosystem-card ul { margin-top:24px; display:grid; gap:10px; border-top:1px solid rgba(255,255,255,.08); padding-top:20px; color:#d7dee7; font-size:13px; }
+	.partner-card { min-height:130px; display:flex; flex-direction:column; justify-content:center; border:1px solid rgba(255,255,255,.1); border-radius:18px; background:rgba(255,255,255,.03); } .partner-card strong { font-size:20px; } .partner-card span { margin-top:7px; color:#8f9dad; font-size:11px; }
+	.role-row { display:grid; grid-template-columns:1fr 1fr auto; align-items:center; gap:20px; border-top:1px solid rgba(255,255,255,.09); padding:22px 0; } .role-row:last-child { border-bottom:1px solid rgba(255,255,255,.09); } .role-row div { display:flex; align-items:center; gap:12px; } .role-row div span { color:#ffb84d; font-size:11px; font-weight:900; } .role-row h3 { color:white; font-size:17px; } .role-row p { color:#b9c2cf; font-size:13px; line-height:1.5; } .role-row a { color:#9cc5ff; font-size:12px; font-weight:900; }
+	.contact-card { display:grid; grid-template-columns:auto 1fr; align-items:center; gap:16px; border:1px solid rgba(255,255,255,.16); border-radius:28px; background:#10203a; padding:24px; box-shadow:0 24px 60px rgba(7,17,31,.22); } .contact-mark { display:flex; height:64px; width:64px; align-items:center; justify-content:center; border-radius:18px; background:#ffb84d; color:#10203a; font-size:15px; font-weight:900; } .contact-card p { color:#9cc5ff; font-size:11px; font-weight:900; text-transform:uppercase; letter-spacing:.16em; } .contact-card h3 { margin-top:5px; color:white; font-size:22px; } .contact-email { grid-column:1/-1; display:flex; align-items:center; justify-content:space-between; border-radius:16px; background:white; padding:16px 18px; color:#10203a; font-size:13px; font-weight:900; overflow-wrap:anywhere; } .contact-email span { flex:none; margin-left:12px; color:#2f67ff; }
+	@media (max-width: 640px) { .stat-cell { min-height:155px; } .role-row { grid-template-columns:1fr; } .role-row a { margin-top:2px; } }
+</style>
