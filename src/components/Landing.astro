@@ -2,84 +2,107 @@
 import BrandLogo from './NextLogo.astro';
 ---
 
-<nav class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#07111f]/90 backdrop-blur-xl">
-	<div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 lg:px-8">
-		<a href="#top" class="flex items-center gap-2.5 text-white">
-			<BrandLogo class="h-8 w-8" />
-			<span class="text-lg font-black tracking-tight">Volontariando</span>
+<nav class="nav-shell" aria-label="Navigazione principale">
+	<div class="nav-inner">
+		<a href="#top" class="brand" aria-label="Volontariando — Torna all'inizio">
+			<BrandLogo class="brand-mark" />
+			<span>Volontariando</span>
 		</a>
-		<div class="hidden items-center gap-7 lg:flex">
-			<a href="#problema" class="nav-link">Problema</a>
-			<a href="#piattaforma" class="nav-link">Piattaforma</a>
-			<a href="#potenziale" class="nav-link">Potenziale</a>
-			<a href="#partner" class="nav-link">Partner</a>
-			<a href="#team" class="nav-link">Chi siamo</a>
+		<div class="nav-links">
+			<a href="#problema">Problema</a>
+			<a href="#piattaforma">Piattaforma</a>
+			<a href="#potenziale">Potenziale</a>
+			<a href="#partner">Partner</a>
+			<a href="#team">Chi siamo</a>
 		</div>
-		<a href="#contatti" class="rounded-full bg-[#ffb84d] px-4 py-2 text-sm font-black text-[#07111f] transition hover:bg-[#ffc874]">
-			Parliamone
-		</a>
+		<a href="#contatti" class="nav-cta">Parliamone</a>
 	</div>
 </nav>
 
-<main class="overflow-hidden bg-[#07111f] text-[#f7f8f4]">
-	<section id="top" class="relative min-h-[760px] pt-16">
-		<div class="hero-grid absolute inset-0 opacity-40"></div>
-		<div class="absolute -right-40 top-20 h-[520px] w-[520px] rounded-full bg-[#2f67ff]/20 blur-[120px]"></div>
-		<div class="relative mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 lg:grid-cols-[0.92fr_1.08fr] lg:px-8 lg:py-28">
-			<div class="reveal-on-scroll">
-				<h1 class="max-w-3xl text-5xl leading-[0.98] font-black tracking-[-0.055em] sm:text-6xl lg:text-[78px]">
-					Il volontariato diventa <span class="text-[#ffb84d]">parte della vita.</span>
+<main>
+	<section id="top" class="hero">
+		<div class="hero-grid" aria-hidden="true"></div>
+		<div class="hero-glow hero-glow-blue" aria-hidden="true"></div>
+		<div class="hero-glow hero-glow-violet" aria-hidden="true"></div>
+
+		<div class="hero-inner">
+			<div class="hero-copy reveal-on-scroll">
+				<h1>
+					Il volontariato diventa
+					<span>parte della vita.</span>
 				</h1>
-				<p class="mt-7 max-w-xl text-lg leading-relaxed text-[#b9c2cf] sm:text-xl">
-					Connettiamo cittadini, enti del Terzo Settore e imprese in un unico ecosistema semplice, verificabile e orientato all’impatto.
+				<p class="hero-lead">
+					Uniamo cittadini, enti del Terzo Settore e imprese in un unico ecosistema semplice, verificabile e orientato all’impatto.
 				</p>
-				<div class="mt-9 flex flex-col gap-3 sm:flex-row">
-					<a href="#contatti" class="inline-flex items-center justify-center rounded-full bg-[#ffb84d] px-7 py-4 font-black text-[#07111f] transition hover:-translate-y-0.5 hover:bg-[#ffc874]">
-						Richiedi il deck
-						<span class="ml-3">↗</span>
+				<div class="hero-actions">
+					<a href="#contatti" class="button button-primary">
+						Scopri il progetto
+						<span aria-hidden="true">↗</span>
 					</a>
-					<a href="#piattaforma" class="inline-flex items-center justify-center rounded-full border border-white/15 px-7 py-4 font-bold text-white transition hover:border-white/30 hover:bg-white/5">
-						Vedi come funziona
-					</a>
+					<a href="#piattaforma" class="button button-secondary">Vedi come funziona</a>
 				</div>
 			</div>
 
-			<div class="reveal-on-scroll relative mx-auto w-full max-w-[620px]" style="transition-delay: 120ms">
-				<div class="absolute -inset-10 rounded-full bg-[#2f67ff]/15 blur-3xl"></div>
-				<div class="dashboard relative rotate-[1deg] rounded-[28px] border border-white/10 bg-[#101c2d] p-3 shadow-2xl shadow-black/40 sm:p-4">
-					<div class="rounded-[20px] bg-[#f4f6f1] p-4 text-[#10203a] sm:p-5">
-						<div class="flex items-center justify-between border-b border-[#dfe4dc] pb-4">
-							<div class="flex items-center gap-2">
-								<BrandLogo class="h-9 w-9" />
-								<div>
-									<p class="text-xs font-black">Volontariando</p>
-									<p class="text-[9px] text-[#75808d]">Esplora opportunità</p>
-								</div>
+			<div class="hero-product reveal-on-scroll">
+				<div class="product-shell">
+					<div class="product-window-bar" aria-hidden="true">
+						<span></span><span></span><span></span>
+					</div>
+
+					<div class="product-toolbar">
+						<div class="product-brand">
+							<BrandLogo class="product-mark" />
+							<div>
+								<strong>Volontariando</strong>
+								<span>Esplora opportunità</span>
 							</div>
-							<div class="h-8 w-8 rounded-full bg-[#ffd891]"></div>
 						</div>
-						<div class="mt-4 grid grid-cols-[1fr_0.42fr] gap-3">
-							<div class="rounded-2xl border border-[#e1e5dc] bg-white p-4">
-								<div class="flex items-center justify-between">
-									<div>
-										<p class="text-[9px] font-bold uppercase tracking-widest text-[#87918e]">Vicino a te</p>
-										<p class="mt-1 text-sm font-black">Attività di comunità</p>
-									</div>
-									<span class="rounded-full bg-[#dfeaff] px-2 py-1 text-[9px] font-black text-[#2f67ff]">12 nuove</span>
+						<div class="profile-dot" aria-hidden="true"></div>
+					</div>
+
+					<div class="product-content">
+						<div class="opportunities">
+							<div class="panel-heading">
+								<div>
+									<strong>Attività di comunità</strong>
 								</div>
-								<div class="mt-4 space-y-2">
-									<div class="activity-row"><span class="activity-icon bg-[#b9d5ff]">A</span><div><b>Ambiente & natura</b><small>3h · 2 km</small></div><strong>92%</strong></div>
-									<div class="activity-row"><span class="activity-icon bg-[#ffe1a8]">S</span><div><b>Supporto scolastico</b><small>4h · 4 km</small></div><strong>87%</strong></div>
-									<div class="activity-row"><span class="activity-icon bg-[#b9e4d2]">C</span><div><b>Inclusione sociale</b><small>2h · 6 km</small></div><strong>81%</strong></div>
+								<em>12 nuove</em>
+							</div>
+							<div class="activity-list">
+								<div class="activity-row">
+									<div class="activity-symbol symbol-blue">A</div>
+									<div class="activity-name">
+										<strong>Ambiente &amp; natura</strong>
+										<span>3h · 2 km</span>
+									</div>
+									<strong class="activity-score">92%</strong>
+								</div>
+								<div class="activity-row">
+									<div class="activity-symbol symbol-ochre">S</div>
+									<div class="activity-name">
+										<strong>Supporto scolastico</strong>
+										<span>4h · 4 km</span>
+									</div>
+									<strong class="activity-score">87%</strong>
+								</div>
+								<div class="activity-row">
+									<div class="activity-symbol symbol-green">C</div>
+									<div class="activity-name">
+										<strong>Inclusione sociale</strong>
+										<span>2h · 6 km</span>
+									</div>
+									<strong class="activity-score">81%</strong>
 								</div>
 							</div>
-							<div class="rounded-2xl bg-[#2f67ff] p-4 text-white">
-								<p class="text-[9px] font-bold uppercase tracking-widest text-[#d7e4ff]">Impatto</p>
-								<p class="mt-5 text-3xl font-black">24h</p>
-								<p class="mt-1 text-[9px] text-[#d7e4ff]">questo mese</p>
-								<div class="mt-5 flex h-20 items-end gap-1">
-									<i class="bar h-[28%]"></i><i class="bar h-[48%]"></i><i class="bar h-[38%]"></i><i class="bar h-[72%]"></i><i class="bar h-[58%]"></i><i class="bar h-[88%]"></i>
-								</div>
+						</div>
+
+						<div class="impact-panel">
+							<div>
+								<strong>24h</strong>
+								<small>questo mese</small>
+							</div>
+							<div class="impact-bars" aria-hidden="true">
+								<i></i><i></i><i></i><i></i><i></i><i></i>
 							</div>
 						</div>
 					</div>
@@ -88,228 +111,1623 @@ import BrandLogo from './NextLogo.astro';
 		</div>
 	</section>
 
-	<section class="border-y border-white/8 bg-[#0b1728]">
-		<div class="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-white/8 px-5 lg:grid-cols-4 lg:px-8">
-			<div class="stat-cell"><strong>4,7 mln</strong><span>persone coinvolte in volontariato nel 2023</span></div>
-			<div class="stat-cell"><strong>−1,9 mln</strong><span>calo rispetto al 2013 nella partecipazione</span></div>
-			<div class="stat-cell"><strong>3 vie</strong><span>cittadini, enti e imprese in un solo circuito</span></div>
-			<div class="stat-cell"><strong>ESG</strong><span>dati verificabili per la rendicontazione</span></div>
+	<section class="metrics" aria-label="Dati principali">
+		<div class="metrics-inner">
+			<article class="metric-cell">
+				<strong>4,7 mln</strong>
+				<span>persone coinvolte in volontariato nel 2023</span>
+			</article>
+			<article class="metric-cell">
+				<strong>−1,9 mln</strong>
+				<span>calo rispetto al 2013 nella partecipazione</span>
+			</article>
+			<article class="metric-cell">
+				<strong>3 vie</strong>
+				<span>cittadini, enti e imprese in un solo circuito</span>
+			</article>
+			<article class="metric-cell">
+				<strong>ESG</strong>
+				<span>dati verificabili per la rendicontazione</span>
+			</article>
 		</div>
 	</section>
 
-	<section id="problema" class="bg-[#07111f] py-24 text-white lg:py-32">
-		<div class="mx-auto max-w-7xl px-5 lg:px-8">
-			<div class="grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
-				<div>
-					<p class="section-kicker text-[#2f67ff]">Il problema</p>
-					<h2 class="mt-5 text-4xl font-black leading-tight tracking-tight sm:text-5xl">Un valore enorme,<br />bloccato da attriti.</h2>
-				</div>
-				<div class="grid gap-5 sm:grid-cols-2">
-					<article class="problem-card">
-						<span>01</span>
-						<h3>Il volontariato è difficile da trovare</h3>
-						<p>Annunci vaghi, appuntamenti rigidi e moduli cartacei trasformano una buona intenzione in una rinuncia.</p>
-					</article>
-					<article class="problem-card">
-						<span>02</span>
-						<h3>Gli enti perdono tempo in burocrazia</h3>
-						<p>Turni, presenze, assicurazioni e rendicontazioni assorbono risorse preziose sottratte alle attività sul campo.</p>
-					</article>
-					<article class="problem-card">
-						<span>03</span>
-						<h3>Le imprese faticano a dimostrare l’impatto</h3>
-						<p>Senza dati certi, il volontariato d’impresa resta difficile da organizzare e da usare nella rendicontazione ESG.</p>
-					</article>
-					<article class="problem-card border-[#10203a] bg-[#10203a] text-white">
-						<span class="text-[#ffb84d]">ISTAT · 2023</span>
-						<h3>4,7 milioni di persone hanno fatto volontariato</h3>
-						<p class="text-[#c3cbd5]">Una base sociale ampia. Eppure la partecipazione è diminuita del 3,6 punti rispetto al 2013.</p>
-					</article>
-				</div>
+	<section id="problema" class="section problem-section">
+		<div class="section-inner">
+			<header class="editorial-header reveal-on-scroll">
+				<h2>Un valore enorme,<span>bloccato da attriti.</span></h2>
+			</header>
+
+			<div class="problem-bento">
+				<article class="problem-feature reveal-on-scroll">
+					<h3>Il volontariato è difficile da trovare</h3>
+					<p>Annunci vaghi, appuntamenti rigidi e moduli cartacei trasformano una buona intenzione in una rinuncia.</p>
+				</article>
+
+				<article class="problem-item reveal-on-scroll">
+					<h3>Gli enti perdono tempo in burocrazia</h3>
+					<p>Turni, presenze, assicurazioni e rendicontazioni assorbono risorse preziose sottratte alle attività sul campo.</p>
+				</article>
+
+				<article class="problem-item reveal-on-scroll">
+					<h3>Le imprese faticano a dimostrare l’impatto</h3>
+					<p>Senza dati certi, il volontariato d’impresa resta difficile da organizzare e da usare nella rendicontazione ESG.</p>
+				</article>
+
+				<article class="problem-stat reveal-on-scroll">
+					<h3>4,7 milioni di persone hanno fatto volontariato</h3>
+					<p>Una base sociale ampia. Eppure la partecipazione è diminuita di 1,9 milioni di volontari rispetto al 2013.</p>
+				</article>
 			</div>
 		</div>
 	</section>
 
-	<section id="piattaforma" class="bg-[#07111f] pb-24 text-white lg:pb-32">
-		<div class="mx-auto max-w-7xl px-5 lg:px-8">
-			<div class="rounded-[36px] border border-white/8 bg-[#10203a] p-6 sm:p-10 lg:p-14">
-				<div class="mx-auto max-w-2xl text-center">
-					<p class="section-kicker text-[#ffb84d]">Come funziona</p>
-					<h2 class="mt-5 text-4xl font-black tracking-tight sm:text-5xl">Da una buona intenzione<br />a un impatto concreto.</h2>
-				</div>
-				<div class="mt-14 grid gap-5 lg:grid-cols-3">
-					<article class="step-card">
-						<div class="step-number">1</div>
+	<section id="piattaforma" class="section platform-section">
+		<div class="section-inner">
+			<header class="section-heading reveal-on-scroll">
+				<h2>Da una buona intenzione<span>a un impatto concreto.</span></h2>
+			</header>
+
+			<div class="steps-layout">
+				<article class="step-feature reveal-on-scroll">
+					<div class="step-copy">
 						<h3>Scopri</h3>
 						<p>Trova opportunità vicine, trasparenti e compatibili con il tempo realmente disponibile.</p>
-						<div class="step-visual">
-							<span class="chip">📍 Vicino a te</span><span class="chip">⏱ 2–4 ore</span><span class="chip">♥ Ambiente</span>
+					</div>
+					<div class="discovery-ui" aria-hidden="true">
+						<div class="ui-pill">
+							<svg viewBox="0 0 24 24"><path d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z"/><circle cx="12" cy="10" r="2"/></svg>
+							Vicino a te
 						</div>
-					</article>
-					<article class="step-card">
-						<div class="step-number">2</div>
+						<div class="ui-pill">
+							<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+							2–4 ore
+						</div>
+						<div class="ui-pill">
+							<svg viewBox="0 0 24 24"><path d="M12 20c-3-2-7-5-7-9a4 4 0 0 1 7-2.7A4 4 0 0 1 19 11c0 4-4 7-7 9Z"/></svg>
+							Ambiente
+						</div>
+					</div>
+				</article>
+
+				<article class="step-item reveal-on-scroll">
+					<div class="step-copy">
 						<h3>Agisci</h3>
 						<p>Iscriviti in pochi clic, con turni e responsabilità chiari, direttamente sul campo.</p>
-						<div class="step-visual flex-col items-stretch">
-							<div class="mini-check"><span>✓</span><b>Disponibilità confermata</b></div>
-							<div class="mini-check"><span>✓</span><b>Documenti completati</b></div>
-						</div>
-					</article>
-					<article class="step-card">
-						<div class="step-number">3</div>
+					</div>
+					<div class="check-ui" aria-hidden="true">
+						<div><span>✓</span><strong>Disponibilità confermata</strong></div>
+						<div><span>✓</span><strong>Documenti completati</strong></div>
+					</div>
+				</article>
+
+				<article class="step-item reveal-on-scroll">
+					<div class="step-copy">
 						<h3>Misura</h3>
 						<p>Ore, competenze e risultati diventano evidenze verificabili per persone, enti e imprese.</p>
-						<div class="step-visual items-end gap-2">
-							<i class="impact-bar h-8"></i><i class="impact-bar h-12"></i><i class="impact-bar h-16"></i><i class="impact-bar h-20"></i>
+					</div>
+					<div class="measure-ui" aria-hidden="true">
+						<i></i><i></i><i></i><i></i>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section class="section ecosystem-section">
+		<div class="section-inner">
+			<header class="ecosystem-heading reveal-on-scroll">
+				<h2>Ciascuno porta valore.<span>Tutti lo ritrovano.</span></h2>
+			</header>
+
+			<div class="ecosystem-bento">
+				<article class="ecosystem-primary reveal-on-scroll">
+					<div>
+						<h3>Cittadini</h3>
+						<p>Opportunità vicine, flessibili e trasparenti. Un portfolio digitale certifica ore e competenze.</p>
+					</div>
+					<ul>
+						<li>Micro-volontariato</li>
+						<li>Profilo e attestazioni</li>
+						<li>Matching per interessi</li>
+					</ul>
+				</article>
+
+				<article class="ecosystem-secondary reveal-on-scroll">
+					<div>
+						<h3>Enti del Terzo Settore</h3>
+						<p>Gestione integrata di turni, presenze e comunicazione, con visibilità e strumenti.</p>
+					</div>
+					<ul>
+						<li>Vetrina pubblica</li>
+						<li>Calendario e candidati</li>
+						<li>Rendicontazione rapida</li>
+					</ul>
+				</article>
+
+				<article class="ecosystem-secondary ecosystem-ochre reveal-on-scroll">
+					<div>
+						<h3>Imprese</h3>
+						<p>Programmi chiavi in mano e dashboard ESG per misurare ore, partecipazione e impatto territoriale.</p>
+					</div>
+					<ul>
+						<li>Team building solidale</li>
+						<li>Servizi pro-bono</li>
+						<li>Dati per la rendicontazione</li>
+					</ul>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section id="potenziale" class="section potential-section">
+		<div class="section-inner">
+			<header class="potential-header reveal-on-scroll">
+				<div>
+					<h2>La domanda è già sul mercato.<span>Serve l’infrastruttura giusta.</span></h2>
+				</div>
+				<p>
+					Normative europee, pressione ESG e cambiamento dei modelli di lavoro rendono urgente una misura
+					affidabile dell’impatto sociale.
+				</p>
+			</header>
+
+			<div class="potential-grid">
+				<article class="potential-card reveal-on-scroll">
+					<strong>CSRD</strong>
+					<p>Le grandi imprese europee devono rendicontare impatti, rischi e opportunità sociali secondo standard comuni.</p>
+					<small>Fonte: Commissione Europea</small>
+				</article>
+
+				<article class="potential-card reveal-on-scroll">
+					<strong>50k+</strong>
+					<p>Le imprese soggette alla CSRD hanno bisogno di dati strutturati sull’impatto sociale delle proprie attività.</p>
+					<small>Riferimento europeo</small>
+				</article>
+
+				<article class="potential-card potential-card-warm reveal-on-scroll">
+					<strong>Territorio</strong>
+					<p>Ogni ente verificato rende la rete più utile; ogni impresa finanzia infrastruttura e crescita locale.</p>
+					<small>Il vantaggio strategico di Volontariando</small>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section id="partner" class="partner-section">
+		<div class="section-inner partner-inner">
+			<p class="partner-label reveal-on-scroll">Con chi collaboriamo</p>
+			<div class="partner-grid">
+				<article class="reveal-on-scroll">
+					<div class="partner-logo-box">
+						<strong>Impact Hub</strong>
+					</div>
+					<span>Innovazione &amp; impatto</span>
+				</article>
+				<article class="reveal-on-scroll">
+					<div class="partner-logo-box">
+						<strong>CREA</strong>
+					</div>
+					<span>Ricerca &amp; sviluppo territoriale</span>
+				</article>
+				<article class="reveal-on-scroll">
+					<div class="partner-logo-box">
+						<strong>CSV Estense</strong>
+					</div>
+					<span>CSV territoriale</span>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section id="team" class="section team-section">
+		<div class="section-inner team-layout">
+			<header class="team-story reveal-on-scroll">
+				<h2>Costruiamo ponti tra tecnologia e comunità.</h2>
+				<p>Siamo un team interdisciplinare con una visione: rendere la partecipazione civica una pratica quotidiana, accessibile e misurabile.</p>
+			</header>
+
+			<div class="team-roles reveal-on-scroll">
+				<article class="role-row">
+					<div class="role-info">
+						<h3>Product &amp; Technology</h3>
+						<p>Persone che vogliono costruire un prodotto utile, robusto e umano.</p>
+					</div>
+					<a href="#contatti">Contribuisci <span aria-hidden="true">↗</span></a>
+				</article>
+
+				<article class="role-row">
+					<div class="role-info">
+						<h3>Growth &amp; Partnerships</h3>
+						<p>Collaboratori capaci di aprire relazioni con enti, università e imprese.</p>
+					</div>
+					<a href="#contatti">Contribuisci <span aria-hidden="true">↗</span></a>
+				</article>
+
+				<article class="role-row">
+					<div class="role-info">
+						<h3>Impact &amp; Community</h3>
+						<p>Persone con esperienza nel Terzo Settore, volontariato e cambiamento sociale.</p>
+					</div>
+					<a href="#contatti">Contribuisci <span aria-hidden="true">↗</span></a>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section id="contatti" class="contact-section">
+		<div class="section-inner">
+			<div class="contact-shell reveal-on-scroll">
+				<div class="contact-grid" aria-hidden="true"></div>
+				<div class="contact-layout">
+					<header>
+						<h2>Vuoi conoscere il progetto da vicino?</h2>
+						<p>Scegli con noi il prossimo passo: una call conoscitiva, una partnership o la presentazione completa del progetto.</p>
+					</header>
+
+					<article class="contact-card">
+						<div class="contact-person">
+							<div class="contact-mark">DR</div>
+							<div>
+								<strong>Davide Rivieccio</strong>
+							</div>
 						</div>
+						<a href="mailto:davide.rivieccio@volontariando.it">
+							davide.rivieccio@volontariando.it
+							<span aria-hidden="true">↗</span>
+						</a>
 					</article>
 				</div>
 			</div>
-		</div>
-	</section>
-
-	<section class="bg-[#07111f] py-24 lg:py-32">
-		<div class="mx-auto max-w-7xl px-5 lg:px-8">
-			<div class="mb-12 max-w-2xl">
-				<p class="section-kicker text-[#ffb84d]">Un ecosistema a tre vie</p>
-				<h2 class="mt-5 text-4xl font-black tracking-tight sm:text-5xl">Ciascuno porta valore.<br />Tutti lo ritrovano.</h2>
-			</div>
-			<div class="grid gap-5 lg:grid-cols-3">
-				<article class="ecosystem-card border-[#2f67ff]/30 bg-[#10203a]">
-					<div class="ecosystem-icon text-[#9cc5ff]">01</div>
-					<h3>Cittadini</h3>
-					<p>Opportunità vicine, flessibili e trasparenti. Un portfolio digitale certifica ore e competenze.</p>
-					<ul><li>Micro-volontariato</li><li>Profilo e attestazioni</li><li>Matching per interessi</li></ul>
-				</article>
-				<article class="ecosystem-card border-[#53c5a2]/30 bg-[#10283a]">
-					<div class="ecosystem-icon text-[#7de0bf]">02</div>
-					<h3>Enti del Terzo Settore</h3>
-					<p>Gestione integrata di turni, presenze e comunicazione, con visibilità e strumenti.</p>
-					<ul><li>Vetrina pubblica</li><li>Calendario e candidati</li><li>Rendicontazione rapida</li></ul>
-				</article>
-				<article class="ecosystem-card border-[#ffb84d]/30 bg-[#2a2533]">
-					<div class="ecosystem-icon text-[#ffd38f]">03</div>
-					<h3>Imprese</h3>
-					<p>Programmi chiavi in mano e dashboard ESG per misurare ore, partecipazione e impatto territoriale.</p>
-					<ul><li>Team building solidale</li><li>Servizi pro-bono</li><li>Dati per la rendicontazione</li></ul>
-				</article>
-			</div>
-		</div>
-	</section>
-
-	<section id="potenziale" class="bg-[#0b1728] py-24 text-white lg:py-32">
-		<div class="mx-auto max-w-7xl px-5 lg:px-8">
-			<div class="grid items-end gap-10 lg:grid-cols-[1fr_0.8fr]">
-				<div>
-					<p class="section-kicker text-[#2f67ff]">Perché adesso</p>
-					<h2 class="mt-5 max-w-3xl text-4xl font-black leading-[1.05] tracking-tight sm:text-6xl">La domanda è già sul mercato.<br /><span class="text-[#2f67ff]">Serve l’infrastruttura giusta.</span></h2>
-				</div>
-				<p class="max-w-xl text-lg leading-relaxed text-[#b9c2cf]">
-					Normative europee, pressione ESG e cambiamento dei modelli di lavoro rendono urgente una misura affidabile dell’impatto sociale.
-				</p>
-			</div>
-			<div class="mt-14 grid gap-4 sm:grid-cols-3">
-				<div class="rounded-[28px] border border-white/8 bg-[#10203a] p-8 lg:p-10">
-					<p class="text-xs font-black uppercase tracking-widest text-[#9cc5ff]">Pressione normativa</p>
-					<p class="mt-5 text-5xl font-black text-[#2f67ff]">CSRD</p>
-					<p class="mt-4 text-sm leading-relaxed text-[#c4cdd8]">Le grandi imprese europee devono rendicontare impatti, rischi e opportunità sociali secondo standard comuni.</p>
-					<p class="mt-6 text-xs font-bold text-[#8794a5]">Fonte: Commissione Europea</p>
-				</div>
-				<div class="rounded-[28px] border border-white/8 bg-[#10283a] p-8 lg:p-10">
-					<p class="text-xs font-black uppercase tracking-widest text-[#7de0bf]">Mercato in crescita</p>
-					<p class="mt-5 text-5xl font-black text-[#2f67ff]">50k+</p>
-					<p class="mt-4 text-sm leading-relaxed text-[#c4cdd8]">Le imprese soggette alla CSRD hanno bisogno di dati strutturati sull’impatto sociale delle proprie attività.</p>
-					<p class="mt-6 text-xs font-bold text-[#8794a5]">Riferimento europeo</p>
-				</div>
-				<div class="rounded-[28px] border border-[#ffb84d]/20 bg-[#2a2533] p-8 text-white lg:p-10">
-					<p class="text-xs font-black uppercase tracking-widest text-[#9cc5ff]">Effetto rete</p>
-					<p class="mt-5 text-5xl font-black text-[#ffb84d]">Territorio</p>
-					<p class="mt-4 text-sm leading-relaxed text-[#c5ced8]">Ogni ente verificato rende la rete più utile; ogni impresa finanzia infrastruttura e crescita locale.</p>
-					<p class="mt-6 text-xs font-bold text-[#8794a5]">Il vantaggio strategico di Volontariando</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="partner" class="border-y border-white/8 bg-[#0b1728] py-20">
-		<div class="mx-auto max-w-7xl px-5 lg:px-8">
-			<p class="text-center text-xs font-black uppercase tracking-[0.18em] text-[#91a0b3]">Con chi stiamo collaborando</p>
-			<div class="mt-10 grid gap-4 text-center sm:grid-cols-3">
-				<div class="partner-card"><strong>Impact Hub</strong><span>Innovazione & impatto</span></div>
-				<div class="partner-card"><strong>CREA</strong><span>Ricerca & sviluppo territoriale</span></div>
-				<div class="partner-card"><strong>CSV Estense</strong><span>CSV territoriale</span></div>
-			</div>
-		</div>
-	</section>
-
-	<section id="team" class="bg-[#07111f] py-24 text-white lg:py-32">
-		<div class="mx-auto max-w-7xl px-5 lg:px-8">
-			<div class="grid gap-12 lg:grid-cols-[0.78fr_1.22fr]">
-				<div>
-					<p class="section-kicker text-[#2f67ff]">Chi siamo</p>
-					<h2 class="mt-5 text-4xl font-black leading-tight tracking-tight sm:text-5xl">Costruiamo ponti tra tecnologia e comunità.</h2>
-					<p class="mt-6 text-lg leading-relaxed text-[#b9c2cf]">Siamo un team interdisciplinare con una visione: rendere la partecipazione civica una pratica quotidiana, accessibile e misurabile.</p>
-				</div>
-				<div>
-					<p class="text-xs font-black uppercase tracking-[0.18em] text-[#9cc5ff]">Chi cerchiamo</p>
-					<div class="mt-5 space-y-3">
-						<article class="role-row"><div><span>01</span><h3>Product & Technology</h3></div><p>Persone che vogliono costruire un prodotto utile, robusto e umano.</p><a href="#contatti">Contribuisci →</a></article>
-						<article class="role-row"><div><span>02</span><h3>Growth & Partnerships</h3></div><p>Collaboratori capaci di aprire relazioni con enti, università e imprese.</p><a href="#contatti">Contribuisci →</a></article>
-						<article class="role-row"><div><span>03</span><h3>Impact & Community</h3></div><p>Persone con esperienza nel Terzo Settore, volontariato e cambiamento sociale.</p><a href="#contatti">Contribuisci →</a></article>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="contatti" class="relative bg-[#2f67ff] py-24 lg:py-32">
-		<div class="absolute inset-0 opacity-20 hero-grid"></div>
-		<div class="relative mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-[1fr_0.9fr] lg:px-8">
-			<div>
-				<p class="section-kicker text-[#ffd38f]">Parliamone</p>
-				<h2 class="mt-5 text-4xl font-black leading-tight tracking-tight sm:text-6xl">Vuoi conoscere il progetto da vicino?</h2>
-				<p class="mt-6 max-w-lg text-lg leading-relaxed text-[#dfe8ff]">Scegli con noi il prossimo passo: una call conoscitiva, una partnership o la presentazione completa del progetto.</p>
-			</div>
-			<article class="contact-card">
-				<div class="contact-mark"><span>DR</span></div>
-				<div>
-					<p>Contatto diretto</p>
-					<h3>Davide Rivieccio</h3>
-				</div>
-				<a href="mailto:davide.rivieccio@volontariando.it" class="contact-email">
-					davide.rivieccio@volontariando.it
-					<span>↗</span>
-				</a>
-			</article>
 		</div>
 	</section>
 </main>
 
-<footer class="border-t border-white/8 bg-[#07111f] py-8 text-[#9ba7b7]">
-	<div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 sm:flex-row sm:items-center sm:justify-between lg:px-8">
-		<div class="flex items-center gap-2 text-white"><BrandLogo class="h-7 w-7" /><strong>Volontariando</strong></div>
-		<p class="text-sm">© 2026 Volontariando. Innovazione sociale.</p>
+<footer>
+	<div class="footer-inner">
+		<div class="footer-brand">
+			<BrandLogo class="footer-mark" />
+			<strong>Volontariando</strong>
+		</div>
+		<p>© 2026 Volontariando. Innovazione sociale.</p>
 	</div>
 </footer>
 
+<script>
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('is-visible');
+					observer.unobserve(entry.target);
+				}
+			});
+		},
+		{ threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+	);
+
+	document.querySelectorAll('.reveal-on-scroll').forEach((el) => observer.observe(el));
+</script>
+
 <style>
-	.nav-link { color: #b9c2cf; font-size: 0.875rem; font-weight: 700; transition: color 180ms ease; }
-	.nav-link:hover { color: white; }
-	.hero-grid { background-image: linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px); background-size: 56px 56px; mask-image: linear-gradient(to bottom, black, transparent 92%); }
-	.dashboard { box-shadow: 0 40px 100px rgba(0,0,0,.38), 0 0 0 1px rgba(255,255,255,.03); }
-	.activity-row { display:grid; grid-template-columns:32px 1fr auto; align-items:center; gap:8px; border-radius:10px; background:#f7f8f5; padding:7px; }
-	.activity-row b { display:block; font-size:10px; } .activity-row small { display:block; margin-top:2px; font-size:8px; color:#87918e; } .activity-row strong { font-size:9px; color:#2f67ff; }
-	.activity-icon { display:flex; height:28px; width:28px; align-items:center; justify-content:center; border-radius:8px; font-size:10px; font-weight:900; }
-	.bar { flex:1; border-radius:3px 3px 0 0; background:rgba(255,255,255,.78); }
-	.stat-cell { min-height:145px; padding:28px 20px; } .stat-cell strong { display:block; font-size:28px; } .stat-cell span { display:block; margin-top:8px; max-width:220px; color:#9ba7b7; font-size:12px; line-height:1.5; }
-	.section-kicker { font-size:11px; font-weight:900; text-transform:uppercase; letter-spacing:.18em; }
-	.problem-card { border:1px solid rgba(255,255,255,.09); border-radius:20px; background:#10203a; padding:28px; } .problem-card span { color:#ffb84d; font-size:11px; font-weight:900; } .problem-card h3 { margin-top:30px; color:white; font-size:20px; line-height:1.2; } .problem-card p { margin-top:12px; color:#c4cdd8; font-size:14px; line-height:1.7; }
-	.step-card { position:relative; min-height:390px; border:1px solid rgba(255,255,255,.09); border-radius:24px; background:#07111f; padding:28px; } .step-number { display:flex; height:38px; width:38px; align-items:center; justify-content:center; border-radius:50%; background:#ffb84d; color:#10203a; font-size:13px; font-weight:900; } .step-card h3 { margin-top:28px; color:white; font-size:28px; } .step-card p { margin-top:10px; color:#c4cdd8; font-size:14px; line-height:1.7; }
-	.step-visual { margin-top:30px; display:flex; min-height:95px; flex-wrap:wrap; align-content:center; align-items:center; justify-content:center; gap:8px; border-radius:16px; border:1px solid rgba(255,255,255,.08); background:#10283a; padding:16px; } .chip { border-radius:999px; background:#f4f6f1; color:#10203a; padding:7px 9px; font-size:10px; font-weight:800; box-shadow:0 4px 12px rgba(0,0,0,.12); }
-	.mini-check { display:flex; align-items:center; gap:8px; border-bottom:1px solid rgba(255,255,255,.08); padding:8px; color:#d7dee7; font-size:11px; } .mini-check:last-child { border-bottom:0; } .mini-check span { display:flex; height:22px; width:22px; align-items:center; justify-content:center; border-radius:50%; background:#bfe7d7; color:#10203a; } .impact-bar { width:44px; border-radius:8px 8px 2px 2px; background:#70d2b0; }
-	.ecosystem-card { border:1px solid; border-radius:24px; padding:30px; } .ecosystem-icon { font-size:12px; font-weight:900; } .ecosystem-card h3 { margin-top:32px; font-size:26px; } .ecosystem-card p { margin-top:12px; min-height:90px; color:#c4cdd8; font-size:14px; line-height:1.7; } .ecosystem-card ul { margin-top:24px; display:grid; gap:10px; border-top:1px solid rgba(255,255,255,.08); padding-top:20px; color:#d7dee7; font-size:13px; }
-	.partner-card { min-height:130px; display:flex; flex-direction:column; justify-content:center; border:1px solid rgba(255,255,255,.1); border-radius:18px; background:rgba(255,255,255,.03); } .partner-card strong { font-size:20px; } .partner-card span { margin-top:7px; color:#8f9dad; font-size:11px; }
-	.role-row { display:grid; grid-template-columns:1fr 1fr auto; align-items:center; gap:20px; border-top:1px solid rgba(255,255,255,.09); padding:22px 0; } .role-row:last-child { border-bottom:1px solid rgba(255,255,255,.09); } .role-row div { display:flex; align-items:center; gap:12px; } .role-row div span { color:#ffb84d; font-size:11px; font-weight:900; } .role-row h3 { color:white; font-size:17px; } .role-row p { color:#b9c2cf; font-size:13px; line-height:1.5; } .role-row a { color:#9cc5ff; font-size:12px; font-weight:900; }
-	.contact-card { display:grid; grid-template-columns:auto 1fr; align-items:center; gap:16px; border:1px solid rgba(255,255,255,.16); border-radius:28px; background:#10203a; padding:24px; box-shadow:0 24px 60px rgba(7,17,31,.22); } .contact-mark { display:flex; height:64px; width:64px; align-items:center; justify-content:center; border-radius:18px; background:#ffb84d; color:#10203a; font-size:15px; font-weight:900; } .contact-card p { color:#9cc5ff; font-size:11px; font-weight:900; text-transform:uppercase; letter-spacing:.16em; } .contact-card h3 { margin-top:5px; color:white; font-size:22px; } .contact-email { grid-column:1/-1; display:flex; align-items:center; justify-content:space-between; border-radius:16px; background:white; padding:16px 18px; color:#10203a; font-size:13px; font-weight:900; overflow-wrap:anywhere; } .contact-email span { flex:none; margin-left:12px; color:#2f67ff; }
-	@media (max-width: 640px) { .stat-cell { min-height:155px; } .role-row { grid-template-columns:1fr; } .role-row a { margin-top:2px; } }
+	:root {
+		--navy-main: #07111F;
+		--navy-dark: #0B1728;
+		--navy-card: #10203A;
+		--navy-green: #10283A;
+		--dark-violet: #2A2533;
+		--blue-primary: #2F67FF;
+		--blue-light: #9CC5FF;
+		--ochre-primary: #FFB84D;
+		--ochre-light: #FFC874;
+		--ochre-soft: #FFD891;
+		--cream-text: #F7F8F4;
+		--cream-ui: #F4F6F1;
+	}
+
+	/* Contenimento globale rigoroso per NextLogo.astro */
+	:global(.brand-logo-box) {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		overflow: hidden;
+		line-height: 0;
+	}
+	:global(.brand-logo-box svg) {
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+		display: block;
+	}
+
+	main,
+	footer {
+		overflow-x: clip;
+		background: var(--navy-main);
+		color: var(--cream-text);
+		font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+	}
+
+	/* Navbar */
+	.nav-shell {
+		position: fixed;
+		inset: 0 0 auto;
+		z-index: 50;
+		height: 68px;
+		background: rgba(7, 17, 31, 0.78);
+		backdrop-filter: blur(22px);
+		-webkit-backdrop-filter: blur(22px);
+		border-bottom: 1px solid rgba(156, 197, 255, 0.10);
+	}
+	.nav-inner,
+	.hero-inner,
+	.metrics-inner,
+	.section-inner,
+	.footer-inner {
+		width: min(1160px, calc(100% - 48px));
+		margin-inline: auto;
+	}
+	.nav-inner {
+		height: 68px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.brand {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		color: var(--cream-text);
+		text-decoration: none;
+	}
+	.brand span {
+		font-family: "Plus Jakarta Sans", sans-serif;
+		font-size: 17px;
+		font-weight: 700;
+		letter-spacing: -0.025em;
+	}
+	:global(.brand-mark) {
+		width: 34px;
+		height: 25px;
+	}
+	.nav-links {
+		display: flex;
+		align-items: center;
+		gap: 32px;
+	}
+	.nav-links a {
+		color: rgba(244, 246, 241, 0.72);
+		text-decoration: none;
+		font-size: 13px;
+		font-weight: 500;
+		transition: color 0.2s ease;
+	}
+	.nav-links a:hover {
+		color: var(--cream-text);
+	}
+	.nav-cta {
+		display: inline-flex;
+		align-items: center;
+		height: 36px;
+		padding: 0 18px;
+		border-radius: 9999px;
+		background: var(--blue-primary);
+		color: var(--cream-text);
+		text-decoration: none;
+		font-size: 13px;
+		font-weight: 600;
+		transition: background 0.2s ease, transform 0.2s ease;
+	}
+	.nav-cta:hover {
+		background: var(--ochre-primary);
+		color: var(--navy-main);
+	}
+
+	/* Tipografia */
+	h1,
+	h2,
+	h3 {
+		font-family: "Plus Jakarta Sans", sans-serif;
+		margin: 0;
+	}
+	h1,
+	h2 {
+		letter-spacing: -0.035em;
+		line-height: 1.06;
+		font-weight: 700;
+		color: var(--cream-text);
+	}
+	h1 span,
+	h2 span {
+		display: block;
+		color: rgba(156, 197, 255, 0.72);
+	}
+
+	/* Hero Apple Keynote Style */
+	.hero {
+		position: relative;
+		padding: 156px 0 112px;
+		background: var(--navy-main);
+	}
+	.hero-grid,
+	.contact-grid {
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		background-image:
+			linear-gradient(rgba(156, 197, 255, 0.035) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(156, 197, 255, 0.035) 1px, transparent 1px);
+		background-size: 72px 72px;
+		mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, rgba(7, 17, 31, 1), transparent 85%);
+	}
+	.hero-glow {
+		position: absolute;
+		border-radius: 9999px;
+		filter: blur(135px);
+		pointer-events: none;
+		opacity: 0.17;
+	}
+	.hero-glow-blue {
+		width: 620px;
+		height: 420px;
+		left: 50%;
+		top: 320px;
+		transform: translateX(-65%);
+		background: var(--blue-primary);
+	}
+	.hero-glow-violet {
+		width: 540px;
+		height: 380px;
+		left: 50%;
+		top: 360px;
+		transform: translateX(-15%);
+		background: var(--dark-violet);
+	}
+	.hero-inner {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.hero-copy {
+		text-align: center;
+		max-width: 820px;
+		margin-inline: auto;
+	}
+	h1 {
+		font-size: clamp(44px, 6.2vw, 80px);
+	}
+	.hero-lead {
+		max-width: 610px;
+		margin: 26px auto 0;
+		color: rgba(244, 246, 241, 0.74);
+		font-size: 18px;
+		line-height: 1.68;
+	}
+	.hero-actions {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 14px;
+		margin-top: 36px;
+	}
+	.button {
+		height: 50px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		border-radius: 9999px;
+		padding: 0 26px;
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: 600;
+		transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+	}
+	.button-primary {
+		background: var(--blue-primary);
+		color: var(--cream-text);
+		box-shadow: 0 12px 32px rgba(47, 103, 255, 0.24);
+	}
+	.button-primary:hover {
+		transform: translateY(-2px);
+		background: var(--ochre-primary);
+		color: var(--navy-main);
+	}
+	.button-secondary {
+		border: 1px solid rgba(255, 184, 77, 0.38);
+		color: var(--ochre-light);
+		background: rgba(16, 32, 58, 0.45);
+	}
+	.button-secondary:hover {
+		transform: translateY(-2px);
+		border-color: var(--ochre-primary);
+		background: rgba(255, 184, 77, 0.10);
+	}
+
+	/* Product Stage */
+	.hero-product {
+		width: 100%;
+		max-width: 940px;
+		margin-top: 68px;
+	}
+	.product-shell {
+		overflow: hidden;
+		border: 1px solid rgba(156, 197, 255, 0.16);
+		border-radius: 26px;
+		background: var(--navy-card);
+		padding: 14px;
+		box-shadow:
+			inset 0 1px 0 rgba(247, 248, 244, 0.10),
+			0 40px 100px rgba(7, 17, 31, 0.70);
+	}
+	.product-window-bar {
+		display: flex;
+		align-items: center;
+		gap: 7px;
+		padding: 2px 6px 12px;
+	}
+	.product-window-bar span {
+		width: 9px;
+		height: 9px;
+		border-radius: 9999px;
+		background: rgba(156, 197, 255, 0.22);
+	}
+	.product-window-bar span:first-child {
+		background: rgba(255, 184, 77, 0.55);
+	}
+	.product-toolbar {
+		height: 68px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 22px;
+		border-radius: 16px 16px 0 0;
+		background: var(--cream-ui);
+		color: var(--navy-main);
+		border-bottom: 1px solid rgba(7, 17, 31, 0.08);
+	}
+	.product-brand {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+	:global(.product-mark) {
+		width: 34px;
+		height: 25px;
+	}
+	.product-brand strong {
+		display: block;
+		font-family: "Plus Jakarta Sans", sans-serif;
+		font-size: 14px;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+	}
+	.product-brand span {
+		display: block;
+		margin-top: 2px;
+		color: rgba(7, 17, 31, 0.55);
+		font-size: 11px;
+	}
+	.profile-dot {
+		width: 34px;
+		height: 34px;
+		border-radius: 9999px;
+		background: var(--ochre-soft);
+		border: 1px solid rgba(7, 17, 31, 0.08);
+	}
+	.product-content {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) 240px;
+		gap: 12px;
+		padding-top: 12px;
+	}
+	.opportunities {
+		min-width: 0;
+		border-radius: 0 0 0 16px;
+		background: var(--cream-ui);
+		padding: 22px;
+	}
+	.panel-heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.panel-heading strong {
+		color: var(--navy-main);
+		font-family: "Plus Jakarta Sans", sans-serif;
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+	}
+	.panel-heading em {
+		border-radius: 9999px;
+		background: rgba(47, 103, 255, 0.12);
+		color: var(--blue-primary);
+		padding: 6px 12px;
+		font-size: 11px;
+		font-style: normal;
+		font-weight: 700;
+	}
+	.activity-list {
+		display: grid;
+		gap: 10px;
+		margin-top: 16px;
+	}
+	.activity-row {
+		display: grid;
+		grid-template-columns: 40px minmax(0, 1fr) auto;
+		align-items: center;
+		gap: 14px;
+		min-height: 62px;
+		border-radius: 14px;
+		background: var(--cream-text);
+		padding: 10px 14px;
+		box-shadow: inset 0 0 0 1px rgba(7, 17, 31, 0.06);
+	}
+	.activity-symbol {
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 11px;
+		color: var(--navy-main);
+		font-family: "Plus Jakarta Sans", sans-serif;
+		font-size: 13px;
+		font-weight: 700;
+	}
+	.symbol-blue {
+		background: var(--blue-light);
+	}
+	.symbol-ochre {
+		background: var(--ochre-soft);
+	}
+	.symbol-green {
+		background: var(--ochre-light);
+	}
+	.activity-name strong {
+		display: block;
+		color: var(--navy-main);
+		font-size: 13px;
+		font-weight: 600;
+	}
+	.activity-name span {
+		display: block;
+		margin-top: 2px;
+		color: rgba(7, 17, 31, 0.55);
+		font-size: 11px;
+	}
+	.activity-score {
+		color: var(--blue-primary);
+		font-family: "Plus Jakarta Sans", sans-serif;
+		font-size: 13px;
+		font-weight: 700;
+	}
+	.impact-panel {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		border-radius: 0 0 16px 0;
+		background: var(--blue-primary);
+		color: var(--cream-text);
+		padding: 24px;
+	}
+	.impact-panel strong {
+		display: block;
+		font-family: "Plus Jakarta Sans", sans-serif;
+		font-size: 40px;
+		font-weight: 700;
+		letter-spacing: -0.04em;
+		line-height: 1;
+	}
+	.impact-panel small {
+		display: block;
+		margin-top: 6px;
+		font-size: 12px;
+		opacity: 0.85;
+	}
+	.impact-bars {
+		height: 108px;
+		display: flex;
+		align-items: flex-end;
+		gap: 7px;
+		margin-top: 24px;
+	}
+	.impact-bars i {
+		flex: 1;
+		border-radius: 4px 4px 1px 1px;
+		background: var(--cream-text);
+		opacity: 0.88;
+	}
+	.impact-bars i:nth-child(1) { height: 32%; }
+	.impact-bars i:nth-child(2) { height: 52%; }
+	.impact-bars i:nth-child(3) { height: 42%; }
+	.impact-bars i:nth-child(4) { height: 74%; }
+	.impact-bars i:nth-child(5) { height: 60%; }
+	.impact-bars i:nth-child(6) { height: 92%; background: var(--ochre-soft); opacity: 1; }
+
+	/* Metrics Strip */
+	.metrics {
+		background: var(--navy-dark);
+		border-block: 1px solid rgba(156, 197, 255, 0.12);
+	}
+	.metrics-inner {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.metric-cell {
+		padding: 36px 28px;
+		border-right: 1px solid rgba(156, 197, 255, 0.12);
+	}
+	.metric-cell:first-child {
+		border-left: 1px solid rgba(156, 197, 255, 0.12);
+	}
+	.metric-cell strong {
+		display: block;
+		color: var(--cream-text);
+		font-family: "Plus Jakarta Sans", sans-serif;
+		font-size: 32px;
+		font-weight: 700;
+		letter-spacing: -0.035em;
+	}
+	.metric-cell:nth-child(3) strong,
+	.metric-cell:nth-child(4) strong {
+		color: var(--ochre-primary);
+	}
+	.metric-cell span {
+		display: block;
+		max-width: 210px;
+		margin-top: 8px;
+		color: rgba(244, 246, 241, 0.65);
+		font-size: 13px;
+		line-height: 1.55;
+	}
+
+	/* Sezioni Generali */
+	.section {
+		padding: 120px 0;
+	}
+	.editorial-header h2,
+	.section-heading h2,
+	.ecosystem-heading h2,
+	.potential-header h2 {
+		font-size: clamp(38px, 5vw, 66px);
+	}
+
+	/* Sezione Problema (Bento Grid 12 colonne equilibrata) */
+	.problem-section {
+		background: var(--navy-main);
+	}
+	.editorial-header {
+		max-width: 780px;
+		margin-bottom: 64px;
+	}
+	.problem-bento {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 0;
+	}
+	.problem-feature,
+	.problem-item,
+	.problem-stat {
+		display: flex;
+		flex-direction: column;
+	}
+	.problem-feature {
+		grid-column: span 6;
+		min-height: 280px;
+		justify-content: center;
+		padding: 24px 64px 24px 0;
+	}
+	.problem-feature h3 {
+		max-width: 520px;
+		color: var(--cream-text);
+		font-size: clamp(34px, 4vw, 52px);
+		font-weight: 700;
+		line-height: 1.08;
+		letter-spacing: -0.03em;
+	}
+	.problem-feature p {
+		max-width: 520px;
+		margin: 22px 0 0;
+		color: rgba(244, 246, 241, 0.72);
+		font-size: 17px;
+		line-height: 1.7;
+	}
+	.problem-stat {
+		grid-column: span 12;
+		min-height: 0;
+		margin-top: 48px;
+		padding-top: 38px;
+		border-top: 1px solid rgba(156, 197, 255, 0.12);
+		display: grid;
+		grid-template-columns: 1fr 1.25fr;
+		align-items: start;
+		gap: 48px;
+	}
+	.problem-stat h3 {
+		color: var(--ochre-primary);
+		max-width: 560px;
+		font-size: clamp(28px, 3.2vw, 42px);
+		font-weight: 700;
+		line-height: 1.12;
+		letter-spacing: -0.025em;
+	}
+	.problem-stat p {
+		max-width: 520px;
+		margin: 8px 0 0;
+		color: rgba(244, 246, 241, 0.78);
+		font-size: 16px;
+		line-height: 1.7;
+	}
+	.problem-item {
+		grid-column: span 3;
+		min-height: 280px;
+		justify-content: center;
+		padding: 24px 28px;
+		border-left: 1px solid rgba(156, 197, 255, 0.12);
+	}
+	.problem-item h3 {
+		margin: 0 0 14px;
+		color: var(--cream-text);
+		font-size: 22px;
+		font-weight: 600;
+		line-height: 1.24;
+		letter-spacing: -0.02em;
+	}
+	.problem-item p {
+		margin: 0;
+		color: rgba(244, 246, 241, 0.72);
+		font-size: 16px;
+		line-height: 1.68;
+	}
+
+	/* Sezione Piattaforma (3 colonne allineate verticalmente) */
+	.platform-section {
+		background: var(--navy-dark);
+	}
+	.section-heading {
+		max-width: 780px;
+		margin-bottom: 56px;
+	}
+	.steps-layout {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0;
+		align-items: start;
+	}
+	.step-feature,
+	.step-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 420px;
+		padding: 8px 48px 8px 0;
+	}
+	.step-feature {
+		background: transparent;
+	}
+	.step-item {
+		padding: 8px 48px;
+		border-left: 1px solid rgba(156, 197, 255, 0.12);
+	}
+	.step-copy h3 {
+		margin: 0 0 14px;
+		color: var(--cream-text);
+		font-size: clamp(28px, 3vw, 40px);
+		font-weight: 700;
+		line-height: 1.12;
+		letter-spacing: -0.035em;
+	}
+	.step-copy p {
+		max-width: 360px;
+		margin: 0;
+		color: rgba(244, 246, 241, 0.75);
+		font-size: 16px;
+		line-height: 1.7;
+	}
+	.discovery-ui,
+	.check-ui,
+	.measure-ui {
+		height: 156px;
+		margin-top: 44px;
+	}
+	.discovery-ui {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		align-items: center;
+		gap: 8px;
+		padding: 0;
+	}
+	.ui-pill {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		min-height: 44px;
+		border-top: 1px solid rgba(156, 197, 255, 0.12);
+		border-bottom: 1px solid rgba(156, 197, 255, 0.12);
+		background: transparent;
+		color: var(--cream-text);
+		padding: 0 14px 0 0;
+		font-size: 13px;
+		font-weight: 500;
+	}
+	.ui-pill svg {
+		width: 16px;
+		height: 16px;
+		fill: none;
+		stroke: var(--ochre-primary);
+		stroke-width: 1.8;
+	}
+	.check-ui {
+		display: grid;
+		align-content: center;
+		padding: 0;
+	}
+	.check-ui div {
+		display: flex;
+		align-items: center;
+		gap: 11px;
+		border-top: 1px solid rgba(156, 197, 255, 0.12);
+		padding: 15px 0;
+	}
+	.check-ui div:last-child {
+		border-bottom: 1px solid rgba(156, 197, 255, 0.12);
+	}
+	.check-ui div span {
+		width: 24px;
+		height: 24px;
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 9999px;
+		background: var(--ochre-soft);
+		color: var(--navy-main);
+		font-size: 12px;
+		font-weight: 700;
+	}
+	.check-ui strong {
+		color: var(--cream-text);
+		font-size: 12px;
+		font-weight: 500;
+	}
+	.measure-ui {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		gap: 10px;
+		padding: 24px;
+	}
+	.measure-ui i {
+		width: 34px;
+		border-radius: 6px 6px 2px 2px;
+		background: var(--ochre-primary);
+	}
+	.measure-ui i:nth-child(1) { height: 36px; opacity: 0.65; }
+	.measure-ui i:nth-child(2) { height: 58px; opacity: 0.8; }
+	.measure-ui i:nth-child(3) { height: 78px; opacity: 0.9; }
+	.measure-ui i:nth-child(4) { height: 100px; }
+
+	/* Sezione Ecosistema (Bento Asimmetrica) */
+	.ecosystem-section {
+		background: var(--navy-main);
+	}
+	.ecosystem-heading {
+		max-width: 780px;
+		margin-bottom: 64px;
+	}
+	.ecosystem-bento {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 0;
+	}
+	.ecosystem-primary,
+	.ecosystem-secondary {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 390px;
+		padding: 8px 48px 8px 0;
+	}
+	.ecosystem-primary {
+		grid-column: span 6;
+		grid-row: auto;
+	}
+	.ecosystem-secondary {
+		grid-column: span 3;
+	}
+	.ecosystem-ochre {
+		padding-right: 0;
+	}
+	.ecosystem-primary h3 {
+		color: var(--cream-text);
+		font-size: clamp(28px, 3vw, 40px);
+		font-weight: 700;
+		letter-spacing: -0.03em;
+	}
+	.ecosystem-primary p {
+		max-width: 360px;
+		margin: 16px 0 0;
+		color: rgba(244, 246, 241, 0.72);
+		font-size: 16px;
+		line-height: 1.68;
+	}
+	.ecosystem-secondary h3 {
+		color: var(--cream-text);
+		font-size: clamp(28px, 3vw, 40px);
+		font-weight: 700;
+		letter-spacing: -0.02em;
+	}
+	.ecosystem-secondary p {
+		max-width: 360px;
+		margin: 16px 0 0;
+		color: rgba(244, 246, 241, 0.72);
+		font-size: 16px;
+		line-height: 1.68;
+	}
+	.ecosystem-secondary {
+		padding-left: 48px;
+		border-left: 1px solid rgba(156, 197, 255, 0.12);
+	}
+	.ecosystem-primary ul,
+	.ecosystem-secondary ul {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		list-style: none;
+		margin: 36px 0 0;
+		padding: 0;
+	}
+	.ecosystem-primary li,
+	.ecosystem-secondary li {
+		border-top: 1px solid rgba(156, 197, 255, 0.12);
+		color: var(--cream-text);
+		padding: 12px 0;
+		font-size: 13px;
+		font-weight: 500;
+	}
+	.ecosystem-secondary li:last-child,
+	.ecosystem-primary li:last-child {
+		border-bottom: 1px solid rgba(156, 197, 255, 0.12);
+	}
+	.ecosystem-ochre li {
+		color: var(--ochre-soft);
+	}
+
+	/* Sezione Potenziale */
+	.potential-section {
+		background: var(--navy-dark);
+	}
+	.potential-header {
+		display: block;
+		margin-bottom: 56px;
+	}
+	.potential-header h2 {
+		max-width: 1120px;
+	}
+	.potential-header h2 span {
+		display: inline;
+		margin-left: 0.18em;
+	}
+	.potential-header > p {
+		max-width: 680px;
+		margin: 24px 0 0;
+		color: rgba(244, 246, 241, 0.72);
+		font-size: 16px;
+		line-height: 1.7;
+	}
+	.potential-grid {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 0;
+	}
+	.potential-card {
+		min-height: 330px;
+		display: flex;
+		flex-direction: column;
+		padding: 8px 48px 8px 0;
+	}
+	.potential-card {
+		grid-column: span 4;
+	}
+	.potential-card:first-child {
+		grid-column: span 5;
+	}
+	.potential-card:last-child {
+		grid-column: span 3;
+	}
+	.potential-card + .potential-card {
+		padding-left: 48px;
+		border-left: 1px solid rgba(156, 197, 255, 0.12);
+	}
+	.potential-card:last-child {
+		padding-right: 0;
+	}
+	.potential-card > strong {
+		color: var(--cream-text);
+		font-family: "Plus Jakarta Sans", sans-serif;
+		font-size: clamp(42px, 5vw, 64px);
+		font-weight: 700;
+		letter-spacing: -0.04em;
+		line-height: 1;
+	}
+	.potential-card p {
+		max-width: 340px;
+		margin: 24px 0 0;
+		color: rgba(244, 246, 241, 0.72);
+		font-size: 16px;
+		line-height: 1.7;
+	}
+	.potential-card small {
+		margin-top: auto;
+		padding-top: 28px;
+		border-top: 1px solid rgba(156, 197, 255, 0.12);
+		color: rgba(156, 197, 255, 0.55);
+		font-size: 12px;
+	}
+	.potential-card-warm {
+		background: transparent;
+	}
+	.potential-card-warm > strong {
+		color: var(--ochre-primary);
+	}
+
+	/* Sezione Partner */
+	.partner-section {
+		background: var(--navy-main);
+		border-top: 1px solid rgba(156, 197, 255, 0.12);
+		border-bottom: 1px solid rgba(156, 197, 255, 0.12);
+		padding: 64px 0;
+	}
+	.partner-label {
+		margin: 0 0 18px;
+		color: var(--blue-light);
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 0;
+	}
+	.partner-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0;
+	}
+	.partner-grid article {
+		min-height: 112px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 12px 32px;
+		text-align: center;
+	}
+	.partner-grid article + article {
+		border-left: 1px solid rgba(156, 197, 255, 0.12);
+	}
+	.partner-logo-box {
+		width: 100%;
+		height: 44px;
+		max-width: 220px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+	}
+	.partner-logo-box strong {
+		color: var(--cream-text);
+		font-family: "Plus Jakarta Sans", sans-serif;
+		font-size: 21px;
+		font-weight: 700;
+		letter-spacing: -0.025em;
+		max-width: 100%;
+		max-height: 100%;
+	}
+	.partner-grid span {
+		margin-top: 6px;
+		color: rgba(244, 246, 241, 0.56);
+		font-size: 12px;
+	}
+
+	/* Sezione Chi Siamo & Ruoli */
+	.team-section {
+		background: var(--navy-main);
+		padding-top: 96px;
+		padding-bottom: 64px;
+	}
+	.team-layout {
+		display: grid;
+		grid-template-columns: 0.85fr 1.15fr;
+		gap: 72px;
+		align-items: start;
+	}
+	.team-story h2 {
+		font-size: clamp(36px, 4.4vw, 52px);
+	}
+	.team-story p {
+		max-width: 460px;
+		margin: 22px 0 0;
+		color: rgba(244, 246, 241, 0.72);
+		font-size: 16px;
+		line-height: 1.7;
+	}
+	.role-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 24px;
+		padding: 28px 0;
+		border-top: 1px solid rgba(156, 197, 255, 0.14);
+	}
+	.role-row:last-child {
+		border-bottom: 1px solid rgba(156, 197, 255, 0.14);
+	}
+	.role-info {
+		max-width: 460px;
+	}
+	.role-row h3 {
+		margin: 0 0 6px;
+		color: var(--cream-text);
+		font-size: 19px;
+		font-weight: 600;
+		letter-spacing: -0.02em;
+	}
+	.role-row p {
+		margin: 0;
+		color: rgba(244, 246, 241, 0.68);
+		font-size: 14px;
+		line-height: 1.6;
+	}
+	.role-row a {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		color: var(--blue-light);
+		text-decoration: none;
+		font-size: 13px;
+		font-weight: 600;
+		white-space: nowrap;
+		transition: color 0.2s ease, transform 0.2s ease;
+	}
+	.role-row a:hover {
+		color: var(--ochre-primary);
+		transform: translateX(3px);
+	}
+
+	/* Sezione Contatti (Card Architettonica) */
+	.contact-section {
+		background: var(--navy-main);
+		padding: 48px 0 96px;
+	}
+	.contact-shell {
+		position: relative;
+		overflow: hidden;
+		padding: 48px 0 0;
+		border-top: 1px solid rgba(156, 197, 255, 0.14);
+	}
+	.contact-grid {
+		display: none;
+	}
+	.contact-layout {
+		position: relative;
+		z-index: 2;
+		display: grid;
+		grid-template-columns: 1.1fr 0.9fr;
+		align-items: center;
+		gap: 56px;
+	}
+	.contact-layout header h2 {
+		max-width: 560px;
+		font-size: clamp(36px, 4.5vw, 56px);
+	}
+	.contact-layout header p {
+		max-width: 500px;
+		margin: 20px 0 0;
+		color: rgba(244, 246, 241, 0.76);
+		font-size: 16px;
+		line-height: 1.7;
+	}
+	.contact-card {
+		border: 0;
+		border-radius: 0;
+		background: transparent;
+		box-shadow: none;
+		padding: 0;
+	}
+	.contact-person {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		padding: 0 0 22px;
+	}
+	.contact-mark {
+		width: 54px;
+		height: 54px;
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 16px;
+		background: var(--ochre-primary);
+		color: var(--navy-main);
+		font-family: "Plus Jakarta Sans", sans-serif;
+		font-size: 15px;
+		font-weight: 700;
+	}
+	.contact-person strong {
+		display: block;
+		color: var(--cream-text);
+		font-family: "Plus Jakarta Sans", sans-serif;
+		font-size: 20px;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+	}
+	.contact-card > a {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		border-top: 1px solid rgba(156, 197, 255, 0.14);
+		border-bottom: 1px solid rgba(156, 197, 255, 0.14);
+		border-radius: 0;
+		background: transparent;
+		color: var(--cream-text);
+		padding: 18px 0;
+		text-decoration: none;
+		font-size: 13px;
+		font-weight: 700;
+		overflow-wrap: anywhere;
+		transition: background 0.2s ease, transform 0.2s ease;
+	}
+	.contact-card > a:hover {
+		color: var(--ochre-primary);
+		transform: translateX(3px);
+	}
+	.contact-card > a span {
+		color: var(--ochre-primary);
+		font-size: 15px;
+	}
+
+	/* Footer */
+	footer {
+		border-top: 1px solid rgba(156, 197, 255, 0.10);
+		background: var(--navy-dark);
+	}
+	.footer-inner {
+		height: 88px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.footer-brand {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		color: var(--cream-text);
+	}
+	.footer-brand strong {
+		font-family: "Plus Jakarta Sans", sans-serif;
+		font-size: 15px;
+		letter-spacing: -0.02em;
+	}
+	:global(.footer-mark) {
+		width: 28px;
+		height: 20px;
+	}
+	.footer-inner p {
+		margin: 0;
+		color: rgba(244, 246, 241, 0.52);
+		font-size: 12px;
+	}
+
+	/* Animazioni Scroll */
+	.reveal-on-scroll {
+		opacity: 0;
+		transform: translateY(20px);
+		transition:
+			opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+			transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+	.reveal-on-scroll.is-visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	/* Responsive */
+	@media (max-width: 1024px) {
+		.nav-links {
+			display: none;
+		}
+		.metrics-inner {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		.metric-cell:nth-child(2) {
+			border-right: 0;
+		}
+		.metric-cell:nth-child(1),
+		.metric-cell:nth-child(2) {
+			border-bottom: 1px solid rgba(156, 197, 255, 0.12);
+		}
+		.problem-feature,
+		.problem-stat,
+		.problem-item {
+			grid-column: span 12;
+		}
+		.problem-feature {
+			min-height: 220px;
+			padding: 24px 0 48px;
+		}
+		.problem-item {
+			min-height: 0;
+			padding: 32px 0;
+			border-left: 0;
+			border-top: 1px solid rgba(156, 197, 255, 0.12);
+		}
+		.problem-stat {
+			grid-template-columns: 1fr;
+			gap: 16px;
+		}
+		.steps-layout {
+			grid-template-columns: 1fr;
+		}
+		.step-feature,
+		.step-item {
+			min-height: 0;
+			padding: 34px 0;
+			border-left: 0;
+			border-top: 1px solid rgba(156, 197, 255, 0.12);
+		}
+		.step-feature {
+			border-top: 0;
+		}
+		.ecosystem-bento {
+			grid-template-columns: 1fr;
+		}
+		.ecosystem-primary,
+		.ecosystem-secondary {
+			min-height: 0;
+			padding: 34px 0;
+			border-left: 0;
+			border-top: 1px solid rgba(156, 197, 255, 0.12);
+			grid-column: span 1;
+		}
+		.ecosystem-primary {
+			border-top: 0;
+		}
+		.ecosystem-primary {
+			grid-row: auto;
+		}
+		.potential-header {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+		.potential-grid {
+			grid-template-columns: 1fr;
+		}
+		.potential-card,
+		.potential-card:first-child,
+		.potential-card:last-child {
+			grid-column: span 1;
+		}
+		.potential-card,
+		.potential-card + .potential-card,
+		.potential-card:last-child {
+			min-height: 0;
+			padding: 34px 0;
+			border-left: 0;
+			border-top: 1px solid rgba(156, 197, 255, 0.12);
+		}
+		.potential-card:first-child {
+			border-top: 0;
+		}
+		.team-layout {
+			grid-template-columns: 1fr;
+			gap: 48px;
+		}
+		.contact-shell {
+			padding: 48px 0 0;
+		}
+		.contact-layout {
+			grid-template-columns: 1fr;
+			gap: 36px;
+		}
+	}
+
+	@media (max-width: 720px) {
+		.nav-inner,
+		.hero-inner,
+		.metrics-inner,
+		.section-inner,
+		.footer-inner {
+			width: min(100% - 32px, 1160px);
+		}
+		.hero {
+			padding: 120px 0 80px;
+		}
+		.hero-lead {
+			font-size: 16px;
+		}
+		.hero-actions {
+			flex-direction: column;
+			width: 100%;
+		}
+		.button {
+			width: 100%;
+		}
+		.hero-product {
+			margin-top: 48px;
+		}
+		.product-content {
+			grid-template-columns: 1fr;
+		}
+		.opportunities {
+			border-radius: 0;
+		}
+		.impact-panel {
+			border-radius: 0 0 16px 16px;
+			flex-direction: row;
+			align-items: flex-end;
+		}
+		.impact-bars {
+			width: 140px;
+			height: 64px;
+			margin-top: 0;
+		}
+		.section {
+			padding: 96px 0;
+		}
+		.team-section {
+			padding-top: 72px;
+			padding-bottom: 40px;
+		}
+		.contact-section {
+			padding: 24px 0 72px;
+		}
+		.partner-grid {
+			grid-template-columns: 1fr;
+		}
+		.partner-grid article {
+			min-height: 104px;
+			padding: 24px 0;
+		}
+		.partner-grid article + article {
+			border-left: 0;
+			border-top: 1px solid rgba(156, 197, 255, 0.12);
+		}
+		.role-row {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 14px;
+		}
+		.contact-shell {
+			padding: 40px 0 0;
+			border-radius: 0;
+		}
+		.footer-inner {
+			height: auto;
+			padding: 28px 0;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 10px;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.reveal-on-scroll {
+			opacity: 1;
+			transform: none;
+			transition: none;
+		}
+		.button,
+		.role-row a,
+		.contact-card > a {
+			transition: none;
+		}
+	}
 </style>
